@@ -1,4 +1,4 @@
-let msg = "71713215616106156130123561352121034535450132161242455203121532612";
+let msg = "312";
 let u = msg.split('');
 let map = ["-", "m", ":3", "mew", "meow", "purrr", "mmeoww", "murrppp"];
 
