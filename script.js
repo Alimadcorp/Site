@@ -7,7 +7,8 @@ tailwind.config = {
             }
         }
     }
-}
+};
 
+// umm code starts here??
 
 console.log("Yup, its loaded");

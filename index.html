@@ -14,23 +14,37 @@
       font-style: normal;
       font-display: swap;
     }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+      /* i dont rlly like this thing */
+    }
   </style>
   <script src="script.js"></script>
 </head>
 
 <body class='p-2 bg-black text-white'>
-  <h1 class='<font-bold text-blue-500 text-2xl m-2'>Hi!</h1>
-  <p>Looks like you've made it to my personal website! My name is Muhammad Ali, also well known as Alimad Co. I am a
-    teenager who likes to code. Some of my projects and my social links are available here on this page so you can
-    discover more about me. I am currently a member of the HackClub, which is a cool place where teenagers are rewarded
-    with prizes for working on *THEIR* projects! This is one of those projects, lol</p>
-  <details>
-    <summary>meow</summary>
-    murrppp m murrppp m mew :3 m purrr mmeoww m mmeoww m - mmeoww m purrr mmeoww m mew - m :3 mew purrr mmeoww m mew
-    purrr :3 m :3 m - mew meow purrr mew purrr meow purrr - m mew :3 m mmeoww m :3 meow :3 meow purrr purrr :3 - mew m
-    :3 m purrr mew :3 mmeoww m :3
-  </details>
-  <img src="https://http.cat/400" class='w-64' alt='car'>
+  <main class="m-2 selection:bg-green-400 selection:text-black">
+    <h1 class='<font-bold text-blue-500 text-2xl m-2'>Hi!</h1>
+    <p>Looks like you've made it to my personal website! My name is Muhammad Ali, also well known as Alimad Co. I am a
+      teenager who likes to code. Some of my projects and my social links are available here on this page so you can
+      discover more about me. I am currently a member of the HackClub, which is a cool place where teenagers are
+      rewarded
+      with prizes for working on *THEIR* projects! This is one of those projects, lol</p>
+    <details>
+      <summary class="list-none [&::-webkit-details-marker]:hidden">meow</summary>
+      murrppp m murrppp m mew :3 m purrr mmeoww m mmeoww m - mmeoww m purrr mmeoww m mew - m :3 mew purrr mmeoww m mew
+      purrr :3 m :3 m - mew meow purrr mew purrr meow purrr - m mew :3 m mmeoww m :3 meow :3 meow purrr purrr :3 - mew m
+      :3 m purrr mew :3 mmeoww m :3
+    </details>
+    <span class="flex h-5 gap-2">
+      <h2>The About Section</h2>
+      <img src="https://e.alimad.co/:hellmo" class="w-5" alt="hellmo">
+    </span>
+    <p>Muhammad Ali </p>
+    <p></p>
+  </main>
+  <img src="https://http.cat/400" class='w-64 selection:bg-green-500/40' alt='car'>
 </body>
 
 </html>
