@@ -6,7 +6,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-const port = 5501; // +1 coz ill run the static site on 3000
+const port = 5501; // +1 coz ill run the static site on 5500
 
 app.get("/", (req, res) => {
     res.redirect("https://github.com/Alimadcorp/Site/tree/main/api")
