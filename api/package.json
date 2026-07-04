@@ -1,6 +1,11 @@
 {
+  "type": "module",
   "dependencies": {
+    "cheerio": "^1.2.0",
     "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "fast-xml-parser": "^5.9.3",
+    "vercel": "^54.20.1"
   }
 }

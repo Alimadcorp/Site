@@ -2,14 +2,20 @@
 // uses express.js
 // author: Muhammad Ali
 
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import { getGithub } from "./github.js";
+
 const app = express();
 app.use(cors());
 const port = 5501; // +1 coz ill run the static site on 5500
 
 app.get("/", (req, res) => {
     res.redirect("https://github.com/Alimadcorp/Site/tree/main/api")
+});
+
+app.get("/github/info", async (req, res) => {
+    res.json(await getGithub());
 });
 
 app.listen(port, () => {
