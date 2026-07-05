@@ -77,7 +77,7 @@
   </section>
 
   <section class="m-0 p-5 gird gap-2 selection:bg-green-400 selection:text-black">
-    <span class="flex h-6 gap-2 w-full mb-3 justify-center">
+    <span class="flex h-6 gap-2 w-full mb-3">
       <h2 class="text-xl text-blue-500">Cool info</h2>
       <img src="https://e.alimad.co/:hehheh" class="w-6" alt=":hehheh:">
     </span>
@@ -125,6 +125,19 @@
           src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=light">
       </picture>
     </a>
+  </section>
+
+  <section class="m-0 px-5 pb-5 gird gap-2 selection:bg-green-400 selection:text-black">
+    <h2 class="text-xl text-blue-500">Comments!</h2>
+    <div id="comments" class="max-h-60 overflow-y-auto break-words grid grid-cols-1 gap-2 leading-5">
+      <p>Loading<span class="text-gray-500 text-xs">...</span></p>
+    </div>
+    <span class="flex flex-row justify-between gap-2 mt-1">
+      <input
+        class="flex-grow bg-transparent border-2 border-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+        id="c-input">
+      <button id="c-post" class="disabled:opacity-50 disabled:cursor-not-allowed">Post</button>
+    </span>
   </section>
 
   <footer class="text-gray-500 text-sm bg-gray-900 px-5 py-3 m-0 flex flex-col justify-between">

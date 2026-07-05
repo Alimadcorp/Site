@@ -12,17 +12,33 @@ tailwind.config = {
 const $ = (id) => document.getElementById(id);
 const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
+const loadComments = () => fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage").then(r => r.json()).then(d => onComments(d));
+
+const postComment = async (text) => {
+    if (text == "" || typeof text != "string") return;
+    $("c-input").disabled = $("c-post").disabled = true;
+    await fetch("https://log.alimad.co/api/log?channel=comments:alimadhomepage&text=" + text);
+    $("c-input").disabled = $("c-post").disabled = false;
+    $("c-input").value = "";
+    loadComments();
+};
+
 async function onloaded() {
     fetch("https://api.alimad.co/github/info").then(r => r.json()).then(d => onGithub(d));
     (function live() { fetch("https://live.alimad.co/ping?app=alimadhomepage").then(r => r.text()).then(d => { onLive(d); setTimeout(live, 10000); }); })(); // trigger an initial load of online users, then call the function 15 seconds after successfully getting the count previously :sob:
     fetch("https://live.alimad.co/stats?app=alimadhomepage").then(r => r.json()).then(d => onLive(d));
-    fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage").then(r => r.json()).then(d => onComments(d));
+    loadComments();
 }
 
 async function onComments(data) {
     data = data.logs;
     // format:
     // [{ channel, country, status, text, time (all strings) }]
+    $("comments").innerHTML = "";
+    for (let c of data) {
+        $("comments").innerHTML += `<p>${esc(c.text)} <span class="text-gray-500 text-xs">${timeago.format(new Date(c.time))}</span></p>`;
+    }
+    setTimeout(() => $("comments").scrollTop = $("comments").scrollHeight, 20); // wait for elemnt to saturate and settle, then scroll to bottom
 }
 
 async function onLive(data) {
@@ -86,5 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     setInterval(() => {
         time.textContent = new Date().toLocaleTimeString('en-US', timeOptions);
-    }, 7);
+    }, 500);
+
+    $("c-input").addEventListener("keydown", (e) => {
+        if (e.key !== 'Enter') return;
+        e.preventDefault();
+        postComment($("c-input").value);
+    });
+
+    $("c-post").addEventListener("click", () => {
+        postComment($("c-input").value);
+    });
 });
