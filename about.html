@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Muhammad Ali's Portfolio</title>
+  <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script src="script.js"></script>
+  <style>
+    @font-face {
+      font-family: Excalifont;
+      src: url("https://excalidraw.nyc3.cdn.digitaloceanspaces.com/fonts/Excalifont-Regular.woff2") format("woff2");
+      font-weight: lighter light normal bold bolder;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html {
+      font-size: 120%;
+    }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: rgb(16, 185, 129);
+    }
+  </style>
+</head>
+
+<body class='p-0 bg-black text-neutral-200 antialiased font-sans selection:bg-green-400 selection:text-black'>
+  <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0">
+    <nav class="border border-emerald-400 text-neutral-400 p-3 border-b-0">
+      <div class="flex flex-wrap items-center gap-3 text-sm font-medium">
+        <a href="/" class="font-bold transition-colors">Home</a>
+        <a href="/about" class="text-white transition-colors">About</a>
+        <a href="/projects" class="transition-colors">Projects</a>
+        <a href="/blog" class=" transition-colors">Blog</a>
+        <a class="" href="/resume">Résumé</a>
+        <a href="/contact" class="transition-colors">Contact</a>
+      </div>
+    </nav>
+    <main class="bg-transparent border border-emerald-400 p-6 md:p-8 space-y-4">
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 justify-center md:justify-start">
+          <h2 class="text-lg font-semibold text-emerald-500 uppercase">history of me, i guess
+          </h2>
+        </div>
+        <p class="text-xs text-neutral-500 block">(This text is in third person for better Google indexing)</p>
+        <p class="text-neutral-300 leading-relaxed text-sm md:text-base">Muhammad Ali is a <span id="age"
+            class="text-emerald-400 font-medium">17</span> year old developer and student from Pakistan, who likes to
+          make
+          websites, apps, games, and is currently most interested in writing secure programs. Muhammad Ali is also known
+          as
+          Alimad, Alimad Co, Alimad Corporations, which is his self made company (which isnt registered yet, lol) </p>
+      </div>
+      <details class="text-neutral-500 text-sm group bg-black">
+        <summary class=" list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none hover:text-neutral-400
+        transition-colors">
+          meow</summary>
+        <div class="mt-2 text-white leading-relaxed">
+          murrppp m murrppp m mew :3 m purrr mmeoww m mmeoww m - mmeoww m purrr mmeoww m mew - m :3 mew purrr mmeoww m
+          mew
+          purrr :3 m :3 m - mew meow purrr mew purrr meow purrr - m mew :3 m mmeoww m :3 meow :3 meow purrr purrr :3 -
+          mew m
+          :3 m purrr mew :3 mmeoww m :3
+        </div>
+      </details>
+    </main>
+  </div>
+
+  <footer class="text-neutral-500 text-xs md:text-sm bg-neutral-950 px-6 py-6">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <span class="flex flex-row gap-6 font-medium">
+        <a href="https://alt.alimad.co" class="transition-colors">Old Website</a>
+        <a href="https://youtube.com/@alimadco" class="transition-colors">Youtube</a>
+        <a href="https://github.com/Alimadcorp" class="transition-colors">Github</a>
+      </span>
+      <p class="flex items-center gap-2 text-neutral-400 font-medium">
+        Made by Muhammad Ali
+        <span class="bg-black px-2.5 py-1 border border-emerald-400 text-xs text-emerald-400"
+          title="Time for me right now" id="time"></span>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -92,7 +92,21 @@ async function onGithub(data) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    onloaded();
+    const path = window.location.pathname;
+    if (path == "/") {
+        onloaded();
+
+        $("c-input").addEventListener("keydown", (e) => {
+            if (e.key !== 'Enter') return;
+            e.preventDefault();
+            postComment($("c-input").value);
+        });
+
+        $("c-post").addEventListener("click", () => {
+            postComment($("c-input").value);
+        });
+    }
+
     const time = $("time");
     const timeOptions = {
         timeZone: "Asia/Karachi",
@@ -104,14 +118,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(() => {
         time.textContent = new Date().toLocaleTimeString('en-US', timeOptions);
     }, 500);
-
-    $("c-input").addEventListener("keydown", (e) => {
-        if (e.key !== 'Enter') return;
-        e.preventDefault();
-        postComment($("c-input").value);
-    });
-
-    $("c-post").addEventListener("click", () => {
-        postComment($("c-input").value);
-    });
 });
