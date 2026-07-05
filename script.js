@@ -25,18 +25,28 @@ async function onGithub(data) {
         $(key).classList.add("text-white");
     }
 
+    const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     // saturate github activity
     const el = (commit, sha, repo, time) => {
-        commit = commit.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); // avoid being xssed lol
+        commit = esc(commit); // avoid being xssed lol
         time = new Date(time);
         const fullDate = time.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-        return `<div class="flex flex-col sm:flex-row sm:items-baseline gap-x-2 gap-y-0 mt-2 text-sm lg:text-base text-gray-300"><p class="break-words min-w-0">Committed "<a class="text-white hover:underline font-medium" href="https://github.com/${repo}/commit/${sha}">${commit}</a>" to <a class="text-white hover:underline font-medium" href="https://github.com/${repo}">${repo.replace("Alimadcorp/", "")}</a></p><span class="text-xs text-gray-400 shrink-0 whitespace-nowrap cursor-help" title="${fullDate}">${timeago.format(time)}</span></div>`;
+        return `<div class="flex flex-col sm:flex-row sm:items-baseline gap-x-2 gap-y-0 mt-1 text-sm lg:text-base text-gray-300"><p class="break-words min-w-0">Committed "<a class="text-white hover:underline font-medium" href="https://github.com/${repo}/commit/${sha}">${commit}</a>" to <a class="text-white hover:underline font-medium" href="https://github.com/${repo}">${repo.replace("Alimadcorp/", "")}</a></p><span class="text-xs text-gray-400 shrink-0 whitespace-nowrap cursor-help" title="${fullDate}">${timeago.format(time)}</span></div>`;
         // looks a lil cramped up, but minimal is better :3
     }
 
     $("gh_activity").innerHTML = "";
     for (let obj of data.latest) {
         $("gh_activity").innerHTML += el(obj.message, obj.sha, obj.repo, obj.time);
+    }
+
+    const bar = (name, percent) => {
+        return `<p>${esc(name)}</p><div class="w-full bg-gray-900 h-1.5 rounded-full" title="${percent}"><div class="w-[${percent}] h-full bg-white rounded-full" title="${percent}"></div></div>`;
+    }
+
+    $("langs").innerHTML = "";
+    for (let [key, value] of Object.entries(data.langs)) {
+        $("langs").innerHTML += bar(key, value);
     }
 }
 

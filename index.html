@@ -74,6 +74,7 @@
       <h2 class="text-xl text-blue-500">Cool info</h2>
       <img src="https://e.alimad.co/:hehheh" class="w-6" alt=":hehheh:">
     </span>
+
     <p class="text-lg text-purple-400">Github stats:</p>
     <div class="text-sm text-gray-400 grid grid-cols-2">
       <p>Rank: <span id="rank" class="font-bold">B+</span></p>
@@ -83,11 +84,24 @@
       <p>Stars: <span id="total_stars_earned" class="font-bold">82</span></p>
       <p>Contributed to: <span id="contributed_to" class="font-bold">12</span></p>
     </div>
-    <div id="langs"></div>
+
+    <p class="text-lg text-purple-400 mt-3">Most used languages:</p>
+    <div class="text-sm text-gray-400 grid grid-cols-[max-content_1fr] gap-x-2 gap-y-0 items-center" id="langs">
+      <p>Javascript</p>
+      <div class="w-full bg-gray-900 h-1.5 rounded-full">
+        <div class="w-[67%] h-full bg-white rounded-full" title="67%"></div>
+      </div>
+      <p>Meowscript</p>
+      <div class="w-full bg-gray-900 h-1.5 rounded-full">
+        <div class="w-[10%] h-full bg-white rounded-full" title="10%"></div>
+      </div>
+    </div>
+
     <p class="text-lg text-purple-400 mt-3">Recent Github activity:</p>
     <div id="gh_activity" class="text-gray-400">
       <p>Loading...</p>
     </div>
+
     <p class="text-lg text-purple-400 mt-3">Hackatime activity:</p>
     <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!">
       <picture>
@@ -100,7 +114,7 @@
   </section>
 
   <footer class="text-gray-500 text-sm bg-gray-900 px-5 py-3 m-0 flex flex-row justify-between">
-    <p>Made by Muhammad Ali</p>
+    <p class="hidden lg:inline">Made by Muhammad Ali</p>
     <span class="m-0 p-0 flex flex-row gap-4">
       <a href="https://alt.alimad.co">Old Website</a>
       <a href="https://youtube.com/@alimadco">Youtube</a>
