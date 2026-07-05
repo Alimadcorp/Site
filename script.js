@@ -10,11 +10,32 @@ tailwind.config = {
 };
 
 const $ = (id) => document.getElementById(id);
-
-// umm code starts here??
+const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 async function onloaded() {
     fetch("https://api.alimad.co/github/info").then(r => r.json()).then(d => onGithub(d));
+    fetch("https://live.alimad.co/ping?app=alimadhomepage").then(r => r.text()).then(d => onLive(d));
+    fetch("https://live.alimad.co/stats?app=alimadhomepage").then(r => r.json()).then(d => onLive(d));
+    fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage").then(r => r.json()).then(d => onComments(d));
+}
+
+async function onComments(data) {
+    data = data.logs;
+    // format:
+    // [{ channel, country, status, text, time (all strings) }]
+}
+
+async function onLive(data) {
+    // format: string number || { totalPings, uniqueIds, onlineCount, lastPing }
+    if (typeof data == "object") {
+        for (let key of ["totalPings", "uniqueIds"]) {
+            $(key).textContent = data[key];
+            $(key).classList.add("text-white");
+        }
+    } else if (typeof data == "string") {
+        $("online").textContent = data;
+        $("online").classList.add("text-white");
+    }
 }
 
 async function onGithub(data) {
@@ -25,7 +46,6 @@ async function onGithub(data) {
         $(key).classList.add("text-white");
     }
 
-    const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     // saturate github activity
     const el = (commit, sha, repo, time) => {
         commit = esc(commit); // avoid being xssed lol
@@ -52,6 +72,4 @@ async function onGithub(data) {
 
 document.addEventListener("DOMContentLoaded", () => {
     onloaded();
-})
-
-console.log("Yup, its loaded");
+});
