@@ -4,8 +4,10 @@
 <head>
   <title>Muhammad Ali's Portfolio</title>
   <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://cdn.tailwindcss.com'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <script src="script.js"></script>
   <style>
     @font-face {
       font-family: Excalifont;
@@ -20,12 +22,17 @@
       /* i dont rlly like this thing */
     }
 
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     a:hover {
       text-decoration: underline;
       color: white;
     }
   </style>
-  <script src="script.js"></script>
 </head>
 
 <body class='p-0 bg-black text-white'>
@@ -83,7 +90,7 @@
     </div>
 
     <p class="text-lg text-purple-400 mt-3">Github stats:</p>
-    <div class="text-sm text-gray-400 grid grid-cols-2">
+    <div class="text-sm text-gray-400 grid grid-cols-2 lg:grid-cols-6">
       <p>Rank: <span id="rank" class="font-bold">B+</span></p>
       <p>Repos (public): <span id="total_public_repos" class="font-bold">86</span></p>
       <p>Commits: <span id="total_commits" class="font-bold">1.1k</span></p>
@@ -120,13 +127,14 @@
     </a>
   </section>
 
-  <footer class="text-gray-500 text-sm bg-gray-900 px-5 py-3 m-0 flex flex-row justify-between">
-    <p class="hidden lg:inline">Made by Muhammad Ali</p>
+  <footer class="text-gray-500 text-sm bg-gray-900 px-5 py-3 m-0 flex flex-col justify-between">
     <span class="m-0 p-0 flex flex-row gap-4">
       <a href="https://alt.alimad.co">Old Website</a>
       <a href="https://youtube.com/@alimadco">Youtube</a>
       <a href="https://github.com/Alimadcorp">Github</a>
     </span>
+    <p class="w-full flex flex-row justify-between">Made by Muhammad Ali <span title="Time for me right now"
+        id="time"></span></p>
   </footer>
 </body>
 

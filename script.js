@@ -14,7 +14,7 @@ const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 
 async function onloaded() {
     fetch("https://api.alimad.co/github/info").then(r => r.json()).then(d => onGithub(d));
-    fetch("https://live.alimad.co/ping?app=alimadhomepage").then(r => r.text()).then(d => onLive(d));
+    (function live() { fetch("https://live.alimad.co/ping?app=alimadhomepage").then(r => r.text()).then(d => { onLive(d); setTimeout(live, 10000); }); })(); // trigger an initial load of online users, then call the function 15 seconds after successfully getting the count previously :sob:
     fetch("https://live.alimad.co/stats?app=alimadhomepage").then(r => r.json()).then(d => onLive(d));
     fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage").then(r => r.json()).then(d => onComments(d));
 }
@@ -68,8 +68,23 @@ async function onGithub(data) {
     for (let [key, value] of Object.entries(data.langs)) {
         $("langs").innerHTML += bar(key, value);
     }
+
+    document.querySelectorAll("a").forEach(el => {
+        if (el.href && el.hostname !== window.location.hostname) el.target = "_blank"; // make all external links open in new tabs
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     onloaded();
+    const time = $("time");
+    const timeOptions = {
+        timeZone: "Asia/Karachi",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    };
+    setInterval(() => {
+        time.textContent = new Date().toLocaleTimeString('en-US', timeOptions);
+    }, 7);
 });
