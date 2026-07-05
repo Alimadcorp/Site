@@ -4,8 +4,8 @@
 <head>
   <title>Muhammad Ali's Portfolio</title>
   <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
-  <script src='https://cdn.tailwindcss.com'>
-  </script>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
   <style>
     @font-face {
       font-family: Excalifont;
@@ -56,24 +56,43 @@
 
   </main>
 
-  <section class="m-0 px-5">
+  <section class="m-0 px-5 selection:bg-green-400 selection:text-black">
     <span class="flex h-6 gap-2 w-full justify-center">
       <h2 class="text-xl text-blue-500">Navigation</h2>
       <img src="https://e.alimad.co/:hyperbongocat" class="w-6" alt=":hyperbongocat:">
     </span>
     <span class="flex justify-center py-2 gap-4">
-      <a href="/projects">Projects</a>
-      <a href="/social">Socials</a>
+      <a href="/projects" class="cursor-not-allowed">Projects</a>
+      <a href="/social" class="cursor-not-allowed">Socials</a>
       <a class="hidden" href="/resume">Résumé</a>
-      <a href="/contact">Contact me</a>
+      <a href="/contact" class="cursor-not-allowed">Contact me</a>
     </span>
   </section>
 
   <section class="m-0 p-5 gird gap-2 selection:bg-green-400 selection:text-black">
-    <span class="flex h-6 gap-2 w-full justify-center">
+    <span class="flex h-6 gap-2 w-full mb-3 justify-center">
       <h2 class="text-xl text-blue-500">Cool info</h2>
       <img src="https://e.alimad.co/:hehheh" class="w-6" alt=":hehheh:">
     </span>
+    <p class="text-lg text-purple-400">Github stats:</p>
+    <div class="text-sm text-gray-400 grid grid-cols-2">
+      <p>Rank: <span id="rank" class="font-bold">B+</span></p>
+      <p>Repos (public): <span id="total_public_repos" class="font-bold">86</span></p>
+      <p>Commits: <span id="total_commits" class="font-bold">1.1k</span></p>
+      <p>PRs: <span id="total_prs" class="font-bold">26</span></p>
+      <p>Stars: <span id="total_stars_earned" class="font-bold">82</span></p>
+      <p>Contributed to: <span id="contributed_to" class="font-bold">12</span></p>
+    </div>
+    <div id="langs"></div>
+    <p class="text-lg text-purple-400 mt-3">Recent Github activity:</p>
+    <div id="gh_activity" class="text-gray-400">
+      <p>Committed "<a class="text-white"
+          href="https://github.com/Alimadcorp/Site/commit/33d942a40ecd582cc2f54f8417eadc2c6c3d9e93">Prepare
+          api</a>" to <a class="text-white" href="https://github.com/Alimadcorp/Site">Site</a> <span class="text-xs"
+          title="Insert time here">20h
+          ago</span></p>
+    </div>
+    <p class="text-lg text-purple-400 mt-3">Hackatime activity:</p>
     <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!">
       <picture>
         <source media="(prefers-color-scheme: dark)"
@@ -88,8 +107,8 @@
     <p>Made by Muhammad Ali</p>
     <span class="m-0 p-0 flex flex-row gap-4">
       <a href="https://alimad.co">Old Website</a>
-      <a href="https://youtube.com/@alimadco">YouTube</a>
-      <a href="https://github.com/Alimadcorp">GitHub</a>
+      <a href="https://youtube.com/@alimadco">Youtube</a>
+      <a href="https://github.com/Alimadcorp">Github</a>
     </span>
   </footer>
 </body>
