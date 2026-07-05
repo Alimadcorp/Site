@@ -30,13 +30,15 @@ async function onloaded() {
     loadComments();
 }
 
+// comment
+
 async function onComments(data) {
     data = data.logs;
     // format:
     // [{ channel, country, status, text, time (all strings) }]
     $("comments").innerHTML = "";
     for (let c of data) {
-        $("comments").innerHTML += `<p class="border-b border-neutral-900/40 pb-1">${esc(c.text)} <span class="text-neutral-500 text-xs ml-1">${timeago.format(new Date(c.time))}</span></p>`;
+        $("comments").innerHTML += `<p class="pt-1">${esc(c.text)} <span class="text-neutral-500 text-xs ml-1">${timeago.format(new Date(c.time))}</span></p>`;
     }
     setTimeout(() => $("comments").scrollTop = $("comments").scrollHeight, 50); // wait for elemnt to saturate and settle, then scroll to bottom
 }
@@ -67,7 +69,7 @@ async function onGithub(data) {
         commit = esc(commit); // avoid being xssed lol
         time = new Date(time);
         const fullDate = time.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-        return `<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-x-2 py-2 border-b border-neutral-800/40 text-sm text-neutral-300"><p class="break-words min-w-0">Committed "<a class="text-blue-400 hover:underline font-medium" href="https://github.com/${repo}/commit/${sha}">${commit}</a>" to <a class="text-neutral-200 hover:underline font-medium" href="https://github.com/${repo}">${repo.replace("Alimadcorp/", "")}</a></p><span class="text-xs text-neutral-500 shrink-0 whitespace-nowrap cursor-help" title="${fullDate}">${timeago.format(time)}</span></div>`;
+        return `<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-x-2 py-2 border-b border-neutral-800/40 text-sm text-neutral-300"><p class="break-words min-w-0">Committed "<a class="text-emerald-400 hover:underline font-medium" href="https://github.com/${repo}/commit/${sha}">${commit}</a>" to <a class="text-neutral-200 hover:underline font-medium" href="https://github.com/${repo}">${repo.replace("Alimadcorp/", "")}</a></p><span class="text-xs text-neutral-500 shrink-0 whitespace-nowrap cursor-help" title="${fullDate}">${timeago.format(time)}</span></div>`;
     }
 
     $("gh_activity").innerHTML = "";
@@ -76,7 +78,7 @@ async function onGithub(data) {
     }
 
     const bar = (name, percent) => {
-        return `<p class="text-xs font-medium">${esc(name)}</p><div class="w-full bg-neutral-900 h-2 rounded-full overflow-hidden" title="${percent}"><div class="h-full bg-blue-500 rounded-full" style="width: ${percent}" title="${percent}"></div></div>`;
+        return `<p class="text-xs font-medium">${esc(name)}</p><div class="w-full bg-neutral-900 h-2 overflow-hidden" title="${percent}"><div class="h-full bg-emerald-500" style="width: ${percent}" title="${percent}"></div></div>`;
     }
 
     $("langs").innerHTML = "";
