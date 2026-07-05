@@ -36,9 +36,9 @@ async function onComments(data) {
     // [{ channel, country, status, text, time (all strings) }]
     $("comments").innerHTML = "";
     for (let c of data) {
-        $("comments").innerHTML += `<p>${esc(c.text)} <span class="text-gray-500 text-xs">${timeago.format(new Date(c.time))}</span></p>`;
+        $("comments").innerHTML += `<p class="border-b border-neutral-900/40 pb-1">${esc(c.text)} <span class="text-neutral-500 text-xs ml-1">${timeago.format(new Date(c.time))}</span></p>`;
     }
-    setTimeout(() => $("comments").scrollTop = $("comments").scrollHeight, 20); // wait for elemnt to saturate and settle, then scroll to bottom
+    setTimeout(() => $("comments").scrollTop = $("comments").scrollHeight, 50); // wait for elemnt to saturate and settle, then scroll to bottom
 }
 
 async function onLive(data) {
@@ -67,8 +67,7 @@ async function onGithub(data) {
         commit = esc(commit); // avoid being xssed lol
         time = new Date(time);
         const fullDate = time.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-        return `<div class="flex flex-col sm:flex-row sm:items-baseline gap-x-2 gap-y-0 mt-1 text-sm lg:text-base text-gray-300"><p class="break-words min-w-0">Committed "<a class="text-white hover:underline font-medium" href="https://github.com/${repo}/commit/${sha}">${commit}</a>" to <a class="text-white hover:underline font-medium" href="https://github.com/${repo}">${repo.replace("Alimadcorp/", "")}</a></p><span class="text-xs text-gray-400 shrink-0 whitespace-nowrap cursor-help" title="${fullDate}">${timeago.format(time)}</span></div>`;
-        // looks a lil cramped up, but minimal is better :3
+        return `<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-x-2 py-2 border-b border-neutral-800/40 text-sm text-neutral-300"><p class="break-words min-w-0">Committed "<a class="text-blue-400 hover:underline font-medium" href="https://github.com/${repo}/commit/${sha}">${commit}</a>" to <a class="text-neutral-200 hover:underline font-medium" href="https://github.com/${repo}">${repo.replace("Alimadcorp/", "")}</a></p><span class="text-xs text-neutral-500 shrink-0 whitespace-nowrap cursor-help" title="${fullDate}">${timeago.format(time)}</span></div>`;
     }
 
     $("gh_activity").innerHTML = "";
@@ -77,7 +76,7 @@ async function onGithub(data) {
     }
 
     const bar = (name, percent) => {
-        return `<p>${esc(name)}</p><div class="w-full bg-gray-900 h-1.5 rounded-full" title="${percent}"><div class="w-[${percent}] h-full bg-white rounded-full" title="${percent}"></div></div>`;
+        return `<p class="text-xs font-medium">${esc(name)}</p><div class="w-full bg-neutral-900 h-2 rounded-full overflow-hidden" title="${percent}"><div class="h-full bg-blue-500 rounded-full" style="width: ${percent}" title="${percent}"></div></div>`;
     }
 
     $("langs").innerHTML = "";

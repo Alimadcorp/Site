@@ -18,12 +18,12 @@
     }
 
     html {
-      font-size: 180%;
+      font-size: 120%;
+      /* Reduced from 180% to give elements room to breathe */
     }
 
     * {
       -webkit-tap-highlight-color: transparent;
-      /* i dont rlly like this thing */
     }
 
     html,
@@ -34,125 +34,197 @@
 
     a:hover {
       text-decoration: underline;
-      color: white;
+      color: #3b82f6;
+      /* Consistent with primary blue */
     }
   </style>
 </head>
 
-<body class='p-0 bg-black text-white'>
-
-  <main class="m-0 p-5 grid gap-2 selection:bg-green-400 selection:text-black">
-    <span class="flex h-10 gap-2 w-full justify-center">
-      <h1 class="text-5xl font-bold text-blue-500">Hii</h1>
-      <img src="https://e.alimad.co/:hellmo" class="w-10" alt=":hellmo:">
-    </span>
-    <p>Looks like you've made it to my personal website! My name is Muhammad Ali. I am a
-      teenager who likes to code. Some of my projects and my social links are available here on this page so you can
-      discover more about me. I am currently a member of the HackClub, which is a cool place where you get prizes for
-      working on your
-      *OWN* projects! This is one of those projects, lol</p>
-    <details class="text-gray-500">
-      <summary class="list-none [&::-webkit-details-marker]:hidden">meow</summary>
-      murrppp m murrppp m mew :3 m purrr mmeoww m mmeoww m - mmeoww m purrr mmeoww m mew - m :3 mew purrr mmeoww m mew
-      purrr :3 m :3 m - mew meow purrr mew purrr meow purrr - m mew :3 m mmeoww m :3 meow :3 meow purrr purrr :3 - mew m
-      :3 m purrr mew :3 mmeoww m :3
-    </details>
-    <span class="flex h-6 gap-2 w-full justify-center">
-      <h2 class="text-xl text-blue-500">history of me, i guess</h2>
-    </span>
-    <span class="text-sm text-gray-500 text-center">(This text is in third person for better Google indexing)</span>
-    <p>Muhammad Ali is a <span id="age">17</span> year old developer and student from Pakistan, who likes to make
-      websites, apps, games, and is currently most interested in writing secure programs. Muhammad Ali is also known as
-      Alimad, Alimad Co, Alimad Corporations, which is his self made company (which isnt registered yet, lol) </p>
-
-  </main>
-
-  <section class="m-0 px-5 selection:bg-green-400 selection:text-black">
-    <span class="flex h-6 gap-2 w-full justify-center">
-      <h2 class="text-xl text-blue-500">Navigation</h2>
-      <img src="https://e.alimad.co/:hyperbongocat" class="w-6" alt=":hyperbongocat:">
-    </span>
-    <span class="flex justify-center py-2 gap-4">
-      <a href="/projects" class="cursor-not-allowed">Projects</a>
-      <a href="/social" class="cursor-not-allowed">Socials</a>
-      <a class="hidden" href="/resume">Résumé</a>
-      <a href="/contact" class="cursor-not-allowed">Contact me</a>
-    </span>
-  </section>
-
-  <section class="m-0 p-5 gird gap-2 selection:bg-green-400 selection:text-black">
-    <span class="flex h-6 gap-2 w-full mb-3">
-      <h2 class="text-xl text-blue-500">Cool info</h2>
-      <img src="https://e.alimad.co/:hehheh" class="w-6" alt=":hehheh:">
-    </span>
-
-    <p class="text-lg text-purple-400">This website:</p>
-    <div class="text-sm text-gray-400 grid">
-      <p>Visits: <span id="totalPings" class="font-bold">99999</span></p>
-      <p>Visitors: <span id="uniqueIds" class="font-bold">9999</span></p>
-      <p>Online: <span id="online" class="font-bold">1</span></p>
-    </div>
-
-    <p class="text-lg text-purple-400 mt-3">Github stats:</p>
-    <div class="text-sm lg:text-xs text-gray-400 grid grid-cols-2 lg:grid-cols-6">
-      <p>Rank: <span id="rank" class="font-bold">B+</span></p>
-      <p>Repos: <span id="total_public_repos" class="font-bold">86</span></p>
-      <p>Commits: <span id="total_commits" class="font-bold">1.1k</span></p>
-      <p>PRs: <span id="total_prs" class="font-bold">26</span></p>
-      <p>Stars: <span id="total_stars_earned" class="font-bold">82</span></p>
-      <p>Contributed to: <span id="contributed_to" class="font-bold">12</span></p>
-    </div>
-
-    <p class="text-lg text-purple-400 mt-3">Most used languages:</p>
-    <div class="text-sm text-gray-400 grid grid-cols-[max-content_1fr] gap-x-2 gap-y-0 items-center" id="langs">
-      <p>Javascript</p>
-      <div class="w-full bg-gray-900 h-1.5 rounded-full">
-        <div class="w-[67%] h-full bg-white rounded-full" title="67%"></div>
+<body class='p-0 bg-neutral-950 text-neutral-200 antialiased font-sans selection:bg-blue-500 selection:text-white'>
+  <div class="max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-6">
+    <main class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 md:p-8 space-y-4">
+      <div class="flex items-center gap-3 justify-center md:justify-start">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-500 tracking-tight">Hii</h1>
+        <img src="https://e.alimad.co/:hellmo" class="w-10 h-10 object-contain" alt=":hellmo:">
       </div>
-      <p>Meowscript</p>
-      <div class="w-full bg-gray-900 h-1.5 rounded-full">
-        <div class="w-[10%] h-full bg-white rounded-full" title="10%"></div>
+
+      <p class="text-neutral-300 leading-relaxed text-base md:text-lg">Looks like you've made it to my personal website!
+        My name is Muhammad Ali. I am a
+        teenager who likes to code. Some of my projects and my social links are available here on this page so you can
+        discover more about me. I am currently a member of the HackClub, which is a cool place where you get prizes for
+        working on your
+        *OWN* projects! This is one of those projects, lol</p>
+
+      <details class="text-neutral-500 text-sm group bg-neutral-950 p-3 rounded-lg border border-neutral-800/50">
+        <summary
+          class="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none hover:text-neutral-400 transition-colors">
+          meow</summary>
+        <div class="mt-2 text-neutral-600 tracking-wide leading-relaxed">
+          murrppp m murrppp m mew :3 m purrr mmeoww m mmeoww m - mmeoww m purrr mmeoww m mew - m :3 mew purrr mmeoww m
+          mew
+          purrr :3 m :3 m - mew meow purrr mew purrr meow purrr - m mew :3 m mmeoww m :3 meow :3 meow purrr purrr :3 -
+          mew m
+          :3 m purrr mew :3 mmeoww m :3
+        </div>
+      </details>
+
+      <hr class="border-neutral-800 my-4" />
+
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 justify-center md:justify-start">
+          <h2 class="text-lg font-semibold text-blue-500 tracking-wide uppercase">history of me, i guess</h2>
+        </div>
+        <p class="text-xs text-neutral-500 block">(This text is in third person for better Google indexing)</p>
+        <p class="text-neutral-300 leading-relaxed text-sm md:text-base">Muhammad Ali is a <span id="age"
+            class="text-blue-400 font-medium">17</span> year old developer and student from Pakistan, who likes to make
+          websites, apps, games, and is currently most interested in writing secure programs. Muhammad Ali is also known
+          as
+          Alimad, Alimad Co, Alimad Corporations, which is his self made company (which isnt registered yet, lol) </p>
       </div>
+    </main>
+    <section class="bg-neutral-900 border border-neutral-800 rounded-xl p-5">
+      <div class="flex items-center gap-2 justify-center mb-4">
+        <h2 class="text-lg font-semibold text-blue-500 tracking-wide uppercase">Navigation</h2>
+        <img src="https://e.alimad.co/:hyperbongocat" class="w-6 h-6 object-contain" alt=":hyperbongocat:">
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-sm font-medium">
+        <a href="/projects"
+          class="cursor-not-allowed text-neutral-400 hover:text-blue-400 transition-colors">Projects</a>
+        <a href="/social" class="cursor-not-allowed text-neutral-400 hover:text-blue-400 transition-colors">Socials</a>
+        <a class="hidden" href="/resume">Résumé</a>
+        <a href="/contact" class="cursor-not-allowed text-neutral-400 hover:text-blue-400 transition-colors">Contact
+          me</a>
+      </div>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-5 space-y-4">
+        <div class="flex items-center gap-2 border-b border-neutral-800 pb-2">
+          <h2 class="text-base font-semibold text-blue-500 tracking-wide uppercase">Cool info</h2>
+          <img src="https://e.alimad.co/:hehheh" class="w-6 h-6 object-contain" alt=":hehheh:">
+        </div>
+        <div>
+          <p class="text-sm font-medium text-blue-400/80 uppercase tracking-wider mb-2">This website:</p>
+          <div
+            class="text-sm text-neutral-400 grid grid-cols-3 gap-2 bg-neutral-950 p-3 rounded-lg border border-neutral-800/50 text-center">
+            <div>
+              <p class="text-xs text-neutral-500 uppercase">Visits</p>
+              <span id="totalPings" class="font-bold text-base text-neutral-200">99999</span>
+            </div>
+            <div>
+              <p class="text-xs text-neutral-500 uppercase">Visitors</p>
+              <span id="uniqueIds" class="font-bold text-base text-neutral-200">9999</span>
+            </div>
+            <div>
+              <p class="text-xs text-neutral-500 uppercase">Online</p>
+              <span id="online" class="font-bold text-base text-green-400">1</span>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-medium text-blue-400/80 uppercase tracking-wider">Most used languages:</p>
+          <div
+            class="text-sm text-neutral-300 bg-neutral-950 p-3 rounded-lg border border-neutral-800/50 grid grid-cols-[max-content_1fr] gap-x-3 gap-y-2 items-center"
+            id="langs">
+            <p class="text-xs font-medium">Javascript</p>
+            <div class="w-full bg-neutral-900 h-2 rounded-full overflow-hidden">
+              <div class="w-[67%] h-full bg-blue-500 rounded-full" title="67%"></div>
+            </div>
+            <p class="text-xs font-medium">Meowscript</p>
+            <div class="w-full bg-neutral-900 h-2 rounded-full overflow-hidden">
+              <div class="w-[10%] h-full bg-blue-500/40 rounded-full" title="10%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between space-y-4">
+        <div>
+          <div class="border-b border-neutral-800 pb-2 mb-3">
+            <p class="text-sm font-medium text-blue-400/80 uppercase tracking-wider">Github stats:</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/40">
+              <p class="text-xs text-neutral-500 uppercase">Rank</p>
+              <span id="rank" class="font-bold text-neutral-200">B+</span>
+            </div>
+            <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/40">
+              <p class="text-xs text-neutral-500 uppercase">Repos</p>
+              <span id="total_public_repos" class="font-bold text-neutral-200">86</span>
+            </div>
+            <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/40">
+              <p class="text-xs text-neutral-500 uppercase">Commits</p>
+              <span id="total_commits" class="font-bold text-neutral-200">1.1k</span>
+            </div>
+            <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/40">
+              <p class="text-xs text-neutral-500 uppercase">PRs</p>
+              <span id="total_prs" class="font-bold text-neutral-200">26</span>
+            </div>
+            <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/40">
+              <p class="text-xs text-neutral-500 uppercase">Stars</p>
+              <span id="total_stars_earned" class="font-bold text-neutral-200">82</span>
+            </div>
+            <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/40">
+              <p class="text-xs text-neutral-500 uppercase">Contributed</p>
+              <span id="contributed_to" class="font-bold text-neutral-200">12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-neutral-900 border border-neutral-800 rounded-xl p-5 space-y-3">
+      <p class="text-sm font-medium text-blue-400/80 uppercase tracking-wider border-b border-neutral-800 pb-2">Recent
+        Github activity:</p>
+      <div id="gh_activity" class="text-neutral-400 divide-y divide-neutral-800/60 max-h-64 overflow-y-auto pr-1">
+        <p class="text-sm py-2">Loading...</p>
+      </div>
+    </section>
+
+    <section class="bg-neutral-900 border border-neutral-800 rounded-xl p-5 space-y-3">
+      <p class="text-sm font-medium text-blue-400/80 uppercase tracking-wider border-b border-neutral-800 pb-2">
+        Hackatime activity:</p>
+      <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!"
+        class="block w-full bg-neutral-950 p-3 rounded-lg border border-neutral-800/50 overflow-hidden">
+        <picture>
+          <source media="(prefers-color-scheme: dark)"
+            srcset="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark">
+          <img alt="Hackatime activity heatmap"
+            src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=light"
+            class="w-full h-auto object-contain block mx-auto">
+        </picture>
+      </a>
+    </section>
+
+    <section class="bg-neutral-900 border border-neutral-800 rounded-xl p-5 space-y-4">
+      <h2 class="text-lg font-semibold text-blue-500 tracking-wide uppercase border-b border-neutral-800 pb-2">Comments!
+      </h2>
+      <div id="comments"
+        class="max-h-60 overflow-y-auto break-words space-y-1 leading-relaxed text-sm bg-neutral-950 p-4 rounded-lg border border-neutral-800/50 pr-2">
+        <p class="text-neutral-500">Loading<span class="text-xs">...</span></p>
+      </div>
+      <div class="flex flex-row items-center gap-2 mt-2">
+        <input
+          class="flex-grow bg-neutral-950 text-neutral-200 border border-neutral-800 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          id="c-input" placeholder="Write a comment...">
+        <button id="c-post"
+          class="bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm px-5 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Post</button>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="text-neutral-500 text-xs md:text-sm bg-neutral-900 border-t border-neutral-800 px-6 py-6 mt-12">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <span class="flex flex-row gap-6 font-medium">
+        <a href="https://alt.alimad.co" class="hover:text-blue-400 transition-colors">Old Website</a>
+        <a href="https://youtube.com/@alimadco" class="hover:text-blue-400 transition-colors">Youtube</a>
+        <a href="https://github.com/Alimadcorp" class="hover:text-blue-400 transition-colors">Github</a>
+      </span>
+      <p class="flex items-center gap-2 text-neutral-400 font-medium">
+        Made by Muhammad Ali
+        <span class="bg-neutral-950 px-2.5 py-1 rounded-md border border-neutral-800 text-xs text-blue-400 font-mono"
+          title="Time for me right now" id="time"></span>
+      </p>
     </div>
-
-    <p class="text-lg text-purple-400 mt-3">Recent Github activity:</p>
-    <div id="gh_activity" class="text-gray-400">
-      <p>Loading...</p>
-    </div>
-
-    <p class="text-lg text-purple-400 mt-3">Hackatime activity:</p>
-    <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!" class="block w-full">
-      <picture>
-        <source media="(prefers-color-scheme: dark)"
-          srcset="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark">
-        <img alt="Hackatime activity heatmap"
-          src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=light"
-          class="w-full h-auto object-contain">
-      </picture>
-    </a>
-  </section>
-
-  <section class="m-0 px-5 pb-5 gird gap-2 selection:bg-green-400 selection:text-black">
-    <h2 class="text-xl text-blue-500">Comments!</h2>
-    <div id="comments" class="max-h-60 overflow-y-auto break-words grid grid-cols-1 gap-2 leading-5 text-sm">
-      <p>Loading<span class="text-gray-500 text-xs">...</span></p>
-    </div>
-    <span class="flex flex-row justify-between gap-2 mt-1">
-      <input
-        class="flex-grow bg-transparent border-2 border-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-        id="c-input">
-      <button id="c-post" class="disabled:opacity-50 disabled:cursor-not-allowed">Post</button>
-    </span>
-  </section>
-
-  <footer class="text-gray-500 text-sm bg-gray-900 px-5 py-3 m-0 flex flex-col justify-between">
-    <span class="m-0 p-0 flex flex-row gap-4">
-      <a href="https://alt.alimad.co">Old Website</a>
-      <a href="https://youtube.com/@alimadco">Youtube</a>
-      <a href="https://github.com/Alimadcorp">Github</a>
-    </span>
-    <p class="w-full flex flex-row justify-between">Made by Muhammad Ali <span title="Time for me right now"
-        id="time"></span></p>
   </footer>
 </body>
 
