@@ -17,6 +17,10 @@
       font-display: swap;
     }
 
+    html {
+      font-size: 180%;
+    }
+
     * {
       -webkit-tap-highlight-color: transparent;
       /* i dont rlly like this thing */
@@ -90,9 +94,9 @@
     </div>
 
     <p class="text-lg text-purple-400 mt-3">Github stats:</p>
-    <div class="text-sm text-gray-400 grid grid-cols-2 lg:grid-cols-6">
+    <div class="text-sm lg:text-xs text-gray-400 grid grid-cols-2 lg:grid-cols-6">
       <p>Rank: <span id="rank" class="font-bold">B+</span></p>
-      <p>Repos (public): <span id="total_public_repos" class="font-bold">86</span></p>
+      <p>Repos: <span id="total_public_repos" class="font-bold">86</span></p>
       <p>Commits: <span id="total_commits" class="font-bold">1.1k</span></p>
       <p>PRs: <span id="total_prs" class="font-bold">26</span></p>
       <p>Stars: <span id="total_stars_earned" class="font-bold">82</span></p>
@@ -117,19 +121,20 @@
     </div>
 
     <p class="text-lg text-purple-400 mt-3">Hackatime activity:</p>
-    <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!">
+    <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!" class="block w-full">
       <picture>
         <source media="(prefers-color-scheme: dark)"
           srcset="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark">
         <img alt="Hackatime activity heatmap"
-          src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=light">
+          src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=light"
+          class="w-full h-auto object-contain">
       </picture>
     </a>
   </section>
 
   <section class="m-0 px-5 pb-5 gird gap-2 selection:bg-green-400 selection:text-black">
     <h2 class="text-xl text-blue-500">Comments!</h2>
-    <div id="comments" class="max-h-60 overflow-y-auto break-words grid grid-cols-1 gap-2 leading-5">
+    <div id="comments" class="max-h-60 overflow-y-auto break-words grid grid-cols-1 gap-2 leading-5 text-sm">
       <p>Loading<span class="text-gray-500 text-xs">...</span></p>
     </div>
     <span class="flex flex-row justify-between gap-2 mt-1">
