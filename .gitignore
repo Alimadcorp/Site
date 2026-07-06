@@ -3,3 +3,5 @@
 .env*
 .vercel
 package-lock.json
+
+history.txt
