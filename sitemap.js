@@ -55,6 +55,7 @@ ${urls.map(item => `  <url>
   </url>`).join("\n")}
 </urlset>`;
 
+    console.log(base);
     fs.writeFileSync(path.join(dir, 'sitemap.xml'), base);
     console.log("Done");
 }
