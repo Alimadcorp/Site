@@ -11,4 +11,4 @@ Built with classic HTML, Tailwind CSS, and JavaScript.
 
 ## Preview
 
-![Website Preview](https://shot.alimad.co/api?url=https://alimad.co&width=1280&height=720&theme=dark)
+<img width="1881" height="1079" alt="image" src="https://github.com/user-attachments/assets/0109627b-6441-4ef7-ab46-908a9ad17b9d" />
