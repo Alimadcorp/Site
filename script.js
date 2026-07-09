@@ -14,6 +14,15 @@ function setFont(font) {
 const setUbuntu = () => { setFont("Ubuntu"); readmode.style.display = "none"; }
 const setExcalifont = () => setFont("Excalifont");
 
+let finito = false;
+
+const endexpand = () => {
+    if (!finito) {
+        finito = true;
+        fetch("https://live.alimad.co/ping?app=finish:about");
+    }
+};
+
 setExcalifont();
 
 const $ = (id) => document.getElementById(id);
