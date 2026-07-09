@@ -1,13 +1,21 @@
-// use our exaclifont!
-tailwind.config = {
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ["Excalifont", "sans-serif"]
+// use our font!
+function setFont(font) {
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: [font, "sans-serif"]
+                }
             }
         }
-    }
-};
+    };
+}
+
+const setUbuntu = () => { setFont("Ubuntu"); readmode.style.display = "none"; }
+const setExcalifont = () => setFont("Excalifont");
+m
+
+setExcalifont();
 
 const $ = (id) => document.getElementById(id);
 const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
