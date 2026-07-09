@@ -14,7 +14,6 @@ function setFont(font) {
 const setUbuntu = () => { setFont("Ubuntu"); readmode.style.display = "none"; }
 const setExcalifont = () => setFont("Excalifont");
 
-
 setExcalifont();
 
 const $ = (id) => document.getElementById(id);
