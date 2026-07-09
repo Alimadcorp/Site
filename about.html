@@ -5,7 +5,7 @@
 <!-- The history of me, by me - Ali -->
 
 <head>
-  <title>Muhammad Ali's Portfolio</title>
+  <title>Alimad Co: About</title>
   <meta name="description"
     content="Official developer portfolio and interactive history of Muhammad Ali (Alimad Co). A full-stack web programmer, open-source script builder, and game developer from Pakistan tracking computing logic from Blender to Unity and upcoming BSCS study tracks.">
   <meta name="keywords"
@@ -14,19 +14,36 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alimad.co/about">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Muhammad Ali (Alimad Co) | Full-Stack Developer & Programmer's Portfolio">
+  <meta property="og:title" content="Alimad Co: About">
   <meta property="og:description"
     content="Step into the open-source history of Muhammad Ali (Alimad Co). Exploring independent game engine builds, Python automation algorithms, viral college utility applications, and active cloud deployments spanning 30+ subdomains, 70+ projects :3">
   <meta property="og:url" content="https://alimad.co/about">
   <meta property="og:image" content="https://cdn.alimad.co/f/static/icon/favicon.png">
   <meta property="og:site_name" content="Alimad Corporations">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Muhammad Ali (Alimad Co) | Full-Stack Developer & Programmer's Portfolio">
+  <meta name="twitter:title" content="Alimad Co: About">
   <meta name="twitter:description"
     content="Explore my comprehensive open-source software log tracking indie game development, automated Python scripts, Hack Club network projects, and upcoming FAST NUCES BSCS engineering tracks.">
   <meta name="twitter:image" content="https://cdn.alimad.co/f/static/icon/favicon.png">
   <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Ali",
+    "alternateName": ["Alimad", "Alimad Co", "Alimad Corporations"],
+    "url": "https://alimad.co",
+    "jobTitle": "Student",
+    "knowsAbout": ["Software Development", "Web Development", "Game Development", "Unity Engine", "Godot", "Cybersecurity"],
+    "sameAs": [
+      "https://github.com/Alimadcorp",
+      "https://alimad.itch.io",
+      "https://alt.alimad.co",
+      "https://youtube.com/@alimadco"
+    ]
+  }
+  </script>
   <script src='https://cdn.tailwindcss.com'></script>
   <script src="script.js"></script>
   <style>
@@ -257,7 +274,82 @@
           Store</a>), which only runs when you hold a button, automatically adds laps and calculates the average. Also I
         added some silly functions to save and load and save online, etc.
         <br>
-        meow meow
+        I also made a <a href="https://meme.alimad.co" class="text-emerald-400">meme of the day</a> app, which does
+        exactly what the name suggests, also, made <a href="https://replace.alimad.co"
+          class="text-emerald-400">MegaReplace</a> which allows people who want to repeat a set of find and replace
+        actions, do it easier, my uncle found this a lot useful (he was the only person who ever found it useful <img
+          src="https://e.alimad.co/:heavysob" class="inline-block h-4" alt=":heavysob:">).
+      </p>
+
+      <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify" id="madlog">
+        One of my first backends was <a href="https://log.alimad.co" class="text-emerald-400">MadLog</a>, im quite
+        hideious with it but its basically a REST KV store, but you can only append to keys (called channels), and you
+        dont need an api key to use it! It powers all of my comment sections and more! Quite useful in logging stuff
+        too, for example, right now I can set it up (without having to set up anything) to log when anyone clicks <a
+          href="https://log.alimad.co/api/log?channel=pplwhopushedthesillybuttoninthesillyblog&text=click"
+          class="text-emerald-400">this
+          button</a>, and
+        then I can see how many ppl did using
+        <a href="https://log.alimad.co/api/pull?channel=pplwhopushedthesillybuttoninthesillyblog"
+          class="text-emerald-400">this link</a>. This app was based on firebase <img src="https://e.alimad.co/:hehheh"
+          class="inline-block h-4" alt=":hehheh:">
+      </p>
+
+      <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify">
+        Next up are the two projects I made for the <a href="https://summer.hackclub.com"
+          class="text-emerald-400">summer of making</a> at hackclub. The first one is <a href="https://somps.alimad.co"
+          class="text-emerald-400">SOMPS</a>, which was a search engine for the same program, it was the project that
+        actually got me this domain (pardon me the terrible chronologicall order im writing this from pure memory ok?
+        <img src="https://e.alimad.co/:sob-pray" class="inline-block h-4" alt=":sob-pray:">). that was the first time i
+        learnt react and NextJS. Next up I made <a href="https://live.alimad.co" class="text-emerald-400">live</a>,
+        because someone (definitely not Sabio <span class="line-through">Tank</span> Tang) was attempting to show the
+        currently online user count by using <a href="https://i.ibb.co/CrrL0Vq/Screenshot-2026-07-09-055151.png"
+          class="text-emerald-400">BroadcastChannels</a> <img src="https://e.alimad.co/:hs" class="inline-block h-4"
+          alt=":hs:"> in <a href="https://github.com/SabioOfficial/Client-of-Making/" class="text-emerald-400">Client of
+          Making</a>, which was also a Summer of Making project.
+      </p>
+
+      <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify">
+        Now as SOMPS was my first large scale scrape-and-index project, I made another similar one where I calculate
+        basic statistics for the hackclub workspace members, and one that provides all the emoji of hackclub (hackclub
+        emoji are added by the members, and there are nearly 40000+ emoji atp) with a single url call! Ive been using it
+        right here to embed the emojis youve seen above too! Try that out <a href="https://emoji.alimad.co"
+          class="text-emerald-400">here</a>.
+      </p>
+
+      <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify">
+        Quite a month later hackclub announces <a href="https://daydream.hackclub.com"
+          class="text-emerald-400">Daydream</a>, which is a worldwide sattelite game jam, but where all
+        skill levels are welcome. I volunteer to organize it in my city. <a href="https://blog.alimad.co/daydream"
+          class="text-emerald-400">Daydream Lahore</a> runs on 27th of
+        September 2025, not much good games were made but I got a lot of exposure and made a few friends, more than all
+        that I now had direction for next time.
+      </p>
+
+      <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify">Well then I made a couple of other
+        smoll stuff, like <a class="text-emerald-400" href="https://cdn.alimad.co">a
+          cloudflare CDN drive</a>, a <a class="text-emerald-400" href="https://blog.alimad.co">blog</a>, a submission
+        to <a class="text-emerald-400"
+          href="https://www.reddit.com/r/badUIbattles/comments/1p6xzil/enter_phone_number_but_by_slingshot/">r/BadUIbattles</a>,
+        which later on was also sponsored in a <a href="https://www.youtube.com/watch?v=-ZHMpxN2jUg"
+          class="text-emerald-400">hyperplexed video</a> :D,
+        and a <a href="https://chat.alimad.co" class="text-emerald-400">chatting app</a> based entirely on <a
+          class="text-emerald-400" href="#madlog">MadLog</a>. I submitted these
+        projects to
+        hackclub <a class="text-emerald-400" href="https://midnight.hackclub.com">midnight</a>, which I couldnt attend,
+        but in place I got an
+        iPad <img src="https://e.alimad.co/:yay" class="inline-block h-4" alt=":yay:">
+      </p>
+
+      <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify">
+        By november, a friend of mine at college introduced me to a cool platform idea, that he wanted to scale, a
+        social app that allows you to know when a friend of yours comes near you within a radius of 2km. This could
+        unlock a lot of possibilities like knowing how many guys are attending at a certain location, or maybe just
+        generally use to meetup with a friend who happens to be nearby. The thing is, I didnt have any experience in
+        React Native by then, which was the framework I chose, and ended u flopping the app <img
+          src="https://e.alimad.co/:sob" class="inline-block h-4" alt=":sob:">, yes, my friend was real mad after that,
+        tho, there are talks of reviving the app... I also helped <a href="https://quantarax.alimad.co"
+          class="text-emerald-400">QuantaraX</a> deploy and manager their site
       </p>
 
       <p class="text-neutral-300 leading-relaxed text-sm md:text-base text-justify">

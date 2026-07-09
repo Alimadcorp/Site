@@ -105,6 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
         $("c-post").addEventListener("click", () => {
             postComment($("c-input").value);
         });
+    } else {
+        document.querySelectorAll("a").forEach(el => {
+            if (el.href && el.hostname !== window.location.hostname) el.target = "_blank"; // make all external links open in new tabs, for pages other than home, do this on content loaded
+        });
     }
 
     const time = $("time");
