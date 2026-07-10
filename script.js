@@ -40,7 +40,7 @@ const postComment = async (text) => {
 };
 
 async function onloaded() {
-    fetch("https://api.alimad.co/github/info").then(r => r.json()).then(d => onGithub(d));
+    fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onGithub(d));
     (function live() { fetch("https://live.alimad.co/ping?app=alimadhomepage").then(r => r.text()).then(d => { onLive(d); setTimeout(live, 10000); }); })(); // trigger an initial load of online users, then call the function 15 seconds after successfully getting the count previously :sob:
     fetch("https://live.alimad.co/stats?app=alimadhomepage").then(r => r.json()).then(d => onLive(d));
     loadComments();

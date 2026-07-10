@@ -4,7 +4,7 @@
 
 import express from "express";
 import cors from "cors";
-import { getGithub } from "./github.js";
+import { getInfo } from "./info.js";
 
 const app = express();
 app.use(cors());
@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
     res.redirect("https://github.com/Alimadcorp/Site/tree/main/api")
 });
 
-app.get("/github/info", async (req, res) => {
-    res.json(await getGithub());
+app.get("/info", async (req, res) => {
+    res.json(await getInfo());
 });
 
 app.listen(port, () => {

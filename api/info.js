@@ -1,6 +1,5 @@
 // this script runs /github/info
 // get basic github stats and send them over
-import { XMLParser } from "fast-xml-parser";
 import * as cheerio from "cheerio";
 import dotenv from "dotenv";
 
@@ -15,7 +14,7 @@ const theHeaders = {
     Authorization: GITHUB_TOKEN ? `token ${GITHUB_TOKEN}` : undefined
 };
 
-export async function getGithub() {
+export async function getInfo() {
     const username = "Alimadcorp";
     const base = `https://stats.github.alimad.co/api`;
 
@@ -50,6 +49,41 @@ export async function getGithub() {
         });
         let r = await Promise.all(commitPromises);
         return r.slice(0, 5);
+    }
+
+    async function hackatime() {
+        function date(i, u = 0) {
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Karachi',
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const parts = formatter.formatToParts(i);
+            const dd = parts.find(p => p.type === 'day').value;
+            const mm = parts.find(p => p.type === 'month').value;
+            const yyyy = parts.find(p => p.type === 'year').value;
+            return u == 1 ? `${yyyy}-${mm}-${dd}` : `${dd}-${mm}-${yyyy}`;
+        }
+        const today = date(new Date());
+        const tomorrow = date((new Date).setDate((new Date()).getDate() + 1));
+        const today2 = date(new Date(), 1);
+        const tomorrow2 = date((new Date).setDate((new Date()).getDate() + 1), 1);
+
+        const r = await fetch(`https://hackatime.hackclub.com/api/v1/users/alimad/stats?start_date=${today}&end_date=${tomorrow}`);
+        const d = await r.json();
+
+        const t = await fetch(`https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=alimad`)
+        const p = await t.json();
+
+        let lp = { key: "", total: 0 };
+        for (let pr of p.projects) {
+            if (lp.total < pr.total) {
+                lp = pr;
+            }
+        }
+
+        return { project: lp, time_today: d.data.human_readable_total, streak: d.data.streak };
     }
 
     const errors = [];
@@ -135,12 +169,13 @@ export async function getGithub() {
             }
         }
 
-        const [latest, totalPublicRepos] = await Promise.all([
+        const [latest, totalPublicRepos, hacka] = await Promise.all([
             latestCommits(),
-            getPublicRepoCount()
+            getPublicRepoCount(),
+            hackatime()
         ]);
 
-        const payload = { username, rank, total_public_repos: totalPublicRepos, ...values, langs, latest };
+        const payload = { username, rank, total_public_repos: totalPublicRepos, ...values, langs, latest, hackatime: hacka };
         if (errors.length) payload._warnings = errors;
         return payload;
     } catch (e) {
