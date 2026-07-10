@@ -5,7 +5,7 @@ const path = require('path');
 
 const domain = 'https://alimad.co';
 
-const exclude = "api,CNAME,history.txt,README.md,robots.txt,script.js,sitemap.js,sitemap.xml,meow.js".split(",");
+const exclude = "api,CNAME,history.txt,README.md,robots.txt,script.js,sitemap.js,sitemap.xml,meow.js,style.css".split(",");
 
 function generate() {
     let dir = __dirname;
