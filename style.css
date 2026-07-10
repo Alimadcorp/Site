@@ -8,6 +8,12 @@
     font-display: swap;
 }
 
+:root {
+    color-scheme: dark;
+    background-color: #000000;
+    --font-sans: 'Excalifont', Ubuntu, ui-sans-serif, system-ui, sans-serif;
+}
+
 html {
     font-size: 120%;
 }
@@ -33,6 +39,10 @@ br {
 
 @view-transition {
     navigation: auto;
+}
+
+::view-transition {
+    background-color: #000000;
 }
 
 #daddy {
