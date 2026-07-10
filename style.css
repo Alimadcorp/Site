@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@font-face {
+    font-family: Excalifont;
+    src: url("https://excalidraw.nyc3.cdn.digitaloceanspaces.com/fonts/Excalifont-Regular.woff2") format("woff2");
+    font-weight: lighter light normal bold bolder;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 120%;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(16, 185, 129);
+}
+
+br {
+    margin-bottom: 8px;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+#daddy {
+    overflow: hidden;
+    position: relative;
+}
+
+#content {
+    view-transition-name: tab-slide;
+}
+
+::view-transition-old(tab-slide) {
+    animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both slide-out;
+}
+
+::view-transition-new(tab-slide) {
+    animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both slide-in;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

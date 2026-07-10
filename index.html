@@ -48,7 +48,7 @@
 </head>
 
 <body class='p-0 bg-black text-neutral-200 antialiased font-sans selection:bg-green-400 selection:text-black'>
-  <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0">
+  <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0" id="daddy">
     <nav class="border border-emerald-400 text-neutral-400 p-3 border-b-0">
       <div class="flex flex-wrap items-center gap-3 text-sm font-medium">
         <a href="/" class="text-white font-semibold transition-colors">Home</a>
@@ -59,129 +59,133 @@
         <a href="/contact" class="transition-colors">Contact</a>
       </div>
     </nav>
-    <main class="bg-transparent border border-emerald-400 border-b-0 p-6 md:p-8 space-y-4">
-      <div class="flex items-center gap-3 justify-center md:justify-start">
-        <h1 class="text-4xl md:text-5xl font-bold text-emerald-500">Hii</h1>
-        <img src="https://e.alimad.co/:hellmo" class="w-10 h-10 object-contain" alt=":hellmo:">
-      </div>
-      <p class="text-neutral-300 leading-relaxed text-base md:text-lg">Looks like you've made it to my personal website!
-        My name is Muhammad Ali. I am a
-        teenager who likes to code. Some of my projects and my social links are available here on this page so you can
-        discover more about me. I am currently a member of the HackClub, which is a cool place where you get prizes for
-        working on your
-        *OWN* projects! This is one of those projects, lol</p>
-    </main>
-    <section class="grid grid-cols-1 md:grid-cols-2">
-      <div class="bg-transparent border border-emerald-400 border-b-0 p-5 space-y-4">
-        <div class="flex items-center gap-2">
-          <h2 class="text-base font-semibold text-emerald-500 font-semibold">Cool info</h2>
-          <img src="https://e.alimad.co/:hehheh" class="w-6 h-6 object-contain" alt=":hehheh:">
+    <div id="content" class="p-0 m-0">
+      <main class="bg-transparent border border-emerald-400 border-b-0 p-6 md:p-8 space-y-4">
+        <div class="flex items-center gap-3 justify-center md:justify-start">
+          <h1 class="text-4xl md:text-5xl font-bold text-emerald-500">Hii</h1>
+          <img src="https://e.alimad.co/:hellmo" class="w-10 h-10 object-contain" alt=":hellmo:">
         </div>
-        <div>
-          <div
-            class="text-sm text-neutral-400 grid grid-cols-3 gap-2 bg-black p-3 border border-emerald-400 text-center">
-            <div>
-              <p class="text-xs text-neutral-500 font-semibold">Visits</p>
-              <span id="totalPings" class="font-bold text-base text-gray-500">99999</span>
+        <p class="text-neutral-300 leading-relaxed text-base md:text-lg">Looks like you've made it to my personal
+          website!
+          My name is Muhammad Ali. I am a
+          teenager who likes to code. Some of my projects and my social links are available here on this page so you can
+          discover more about me. I am currently a member of the HackClub, which is a cool place where you get prizes
+          for
+          working on your
+          *OWN* projects! This is one of those projects, lol</p>
+      </main>
+      <section class="grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-transparent border border-emerald-400 border-b-0 p-5 space-y-4">
+          <div class="flex items-center gap-2">
+            <h2 class="text-base font-semibold text-emerald-500 font-semibold">Cool info</h2>
+            <img src="https://e.alimad.co/:hehheh" class="w-6 h-6 object-contain" alt=":hehheh:">
+          </div>
+          <div>
+            <div
+              class="text-sm text-neutral-400 grid grid-cols-3 gap-2 bg-black p-3 border border-emerald-400 text-center">
+              <div>
+                <p class="text-xs text-neutral-500 font-semibold">Visits</p>
+                <span id="totalPings" class="font-bold text-base text-gray-500">99999</span>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-500 font-semibold">Visitors</p>
+                <span id="uniqueIds" class="font-bold text-base text-gray-500">9999</span>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-500 font-semibold">Online</p>
+                <span id="online" class="font-bold text-base text-gray-500">1</span>
+              </div>
             </div>
-            <div>
-              <p class="text-xs text-neutral-500 font-semibold">Visitors</p>
-              <span id="uniqueIds" class="font-bold text-base text-gray-500">9999</span>
-            </div>
-            <div>
-              <p class="text-xs text-neutral-500 font-semibold">Online</p>
-              <span id="online" class="font-bold text-base text-gray-500">1</span>
+          </div>
+          <div class="space-y-2">
+            <p class="text-sm font-medium text-emerald-400/80 font-semibold">Most used languages:</p>
+            <div
+              class="text-sm text-neutral-300 bg-black p-3 border border-emerald-400 grid grid-cols-[max-content_1fr] gap-x-3 gap-y-2 items-center"
+              id="langs">
+              <p class="text-xs font-medium">Javascript</p>
+              <div class="w-full bg-transparent h-2 overflow-hidden">
+                <div class="w-[67%] h-full bg-emerald-500 title=" 67%"></div>
+              </div>
+              <p class="text-xs font-medium">Meowscript</p>
+              <div class="w-full bg-transparent h-2 overflow-hidden">
+                <div class="w-[10%] h-full bg-emerald-500 title=" 10%"></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="space-y-2">
-          <p class="text-sm font-medium text-emerald-400/80 font-semibold">Most used languages:</p>
-          <div
-            class="text-sm text-neutral-300 bg-black p-3 border border-emerald-400 grid grid-cols-[max-content_1fr] gap-x-3 gap-y-2 items-center"
-            id="langs">
-            <p class="text-xs font-medium">Javascript</p>
-            <div class="w-full bg-transparent h-2 overflow-hidden">
-              <div class="w-[67%] h-full bg-emerald-500 title=" 67%"></div>
+        <div
+          class="bg-transparent border border-emerald-400 md:border-l-0 border-b-0 p-5 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="pb-1 mb-3">
+              <p class="text-sm font-medium text-emerald-400/80 font-semibold">Github stats:</p>
             </div>
-            <p class="text-xs font-medium">Meowscript</p>
-            <div class="w-full bg-transparent h-2 overflow-hidden">
-              <div class="w-[10%] h-full bg-emerald-500 title=" 10%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="bg-transparent border border-emerald-400 md:border-l-0 border-b-0 p-5 flex flex-col justify-between space-y-4">
-        <div>
-          <div class="pb-1 mb-3">
-            <p class="text-sm font-medium text-emerald-400/80 font-semibold">Github stats:</p>
-          </div>
-          <div class="grid grid-cols-2 gap-3 text-sm">
-            <div class="bg-black p-2.5 border border-emerald-400">
-              <p class=" text-xs text-neutral-500 font-semibold">Rank</p>
-              <span id="rank" class="font-bold text-neutral-500">B+</span>
-            </div>
-            <div class="bg-black p-2.5 border border-emerald-400">
-              <p class=" text-xs text-neutral-500 font-semibold">Repos</p>
-              <span id="total_public_repos" class="font-bold text-neutral-500">86</span>
-            </div>
-            <div class="bg-black p-2.5 border border-emerald-400">
-              <p class=" text-xs text-neutral-500 font-semibold">Commits</p>
-              <span id="total_commits" class="font-bold text-neutral-500">1.1k</span>
-            </div>
-            <div class="bg-black p-2.5 border border-emerald-400">
-              <p class=" text-xs text-neutral-500 font-semibold">PRs</p>
-              <span id="total_prs" class="font-bold text-neutral-500">26</span>
-            </div>
-            <div class="bg-black p-2.5 border border-emerald-400">
-              <p class=" text-xs text-neutral-500 font-semibold">Stars</p>
-              <span id="total_stars_earned" class="font-bold text-neutral-500">82</span>
-            </div>
-            <div class="bg-black p-2.5 border border-emerald-400">
-              <p class=" text-xs text-neutral-500 font-semibold">Contributed</p>
-              <span id="contributed_to" class="font-bold text-neutral-500">12</span>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-black p-2.5 border border-emerald-400">
+                <p class=" text-xs text-neutral-500 font-semibold">Rank</p>
+                <span id="rank" class="font-bold text-neutral-500">B+</span>
+              </div>
+              <div class="bg-black p-2.5 border border-emerald-400">
+                <p class=" text-xs text-neutral-500 font-semibold">Repos</p>
+                <span id="total_public_repos" class="font-bold text-neutral-500">86</span>
+              </div>
+              <div class="bg-black p-2.5 border border-emerald-400">
+                <p class=" text-xs text-neutral-500 font-semibold">Commits</p>
+                <span id="total_commits" class="font-bold text-neutral-500">1.1k</span>
+              </div>
+              <div class="bg-black p-2.5 border border-emerald-400">
+                <p class=" text-xs text-neutral-500 font-semibold">PRs</p>
+                <span id="total_prs" class="font-bold text-neutral-500">26</span>
+              </div>
+              <div class="bg-black p-2.5 border border-emerald-400">
+                <p class=" text-xs text-neutral-500 font-semibold">Stars</p>
+                <span id="total_stars_earned" class="font-bold text-neutral-500">82</span>
+              </div>
+              <div class="bg-black p-2.5 border border-emerald-400">
+                <p class=" text-xs text-neutral-500 font-semibold">Contributed</p>
+                <span id="contributed_to" class="font-bold text-neutral-500">12</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="bg-transparent border border-emerald-400 border-b-0 p-5 space-y-3">
-      <p class="text-sm font-medium text-emerald-400/80 font-semibold">
-        Recent Github activity:</p>
-      <div id="gh_activity" class="text-neutral-400 divide-y divide-neutral-800/60 max-h-64 overflow-y-auto pr-1">
-        <p class="text-sm py-2">Loading...</p>
-      </div>
-    </section>
-    <section class="bg-transparent border border-emerald-400 border-b-0 p-5 space-y-3">
-      <p class="text-sm font-medium text-emerald-400/80 font-semibold">
-        Hackatime activity:</p>
-      <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!"
-        class="block w-full bg-black p-3 border border-emerald-400 overflow-hidden">
-        <picture>
-          <source media="(prefers-color-scheme: dark)"
-            srcset="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark">
-          <img alt="Hackatime activity heatmap"
-            src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark"
-            class="w-full h-auto object-contain block mx-auto"> <!-- force dark mode -->
-        </picture>
-      </a>
-    </section>
-    <section class="bg-transparent border border-emerald-400 p-5 space-y-4">
-      <h2 class="text-lg font-semibold text-emerald-500 font-semibold">
-        Comments!
-      </h2>
-      <div id="comments"
-        class="max-h-60 overflow-y-auto break-words space-y-1 leading-relaxed text-sm bg-black p-4 border border-emerald-400 pr-2">
-        <p class="text-neutral-500">Loading<span class="text-xs">...</span></p>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between gap-2 mt-2">
-        <input
-          class="flex-grow bg-black text-neutral-200 border border-emerald-400 px-4 py-2 text-sm focus:outline-none focus:border-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          id="c-input" placeholder="Write a comment...">
-        <button id="c-post"
-          class="font-medium text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Post</button>
-      </div>
-    </section>
+      </section>
+      <section class="bg-transparent border border-emerald-400 border-b-0 p-5 space-y-3">
+        <p class="text-sm font-medium text-emerald-400/80 font-semibold">
+          Recent Github activity:</p>
+        <div id="gh_activity" class="text-neutral-400 divide-y divide-neutral-800/60 max-h-64 overflow-y-auto pr-1">
+          <p class="text-sm py-2">Loading...</p>
+        </div>
+      </section>
+      <section class="bg-transparent border border-emerald-400 border-b-0 p-5 space-y-3">
+        <p class="text-sm font-medium text-emerald-400/80 font-semibold">
+          Hackatime activity:</p>
+        <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!"
+          class="block w-full bg-black p-3 border border-emerald-400 overflow-hidden">
+          <picture>
+            <source media="(prefers-color-scheme: dark)"
+              srcset="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark">
+            <img alt="Hackatime activity heatmap"
+              src="https://heatmap.shymike.dev?id=1190&timezone=Asia%2FKarachi&theme=dark"
+              class="w-full h-auto object-contain block mx-auto"> <!-- force dark mode -->
+          </picture>
+        </a>
+      </section>
+      <section class="bg-transparent border border-emerald-400 p-5 space-y-4">
+        <h2 class="text-lg font-semibold text-emerald-500 font-semibold">
+          Comments!
+        </h2>
+        <div id="comments"
+          class="max-h-60 overflow-y-auto break-words space-y-1 leading-relaxed text-sm bg-black p-4 border border-emerald-400 pr-2">
+          <p class="text-neutral-500">Loading<span class="text-xs">...</span></p>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between gap-2 mt-2">
+          <input
+            class="flex-grow bg-black text-neutral-200 border border-emerald-400 px-4 py-2 text-sm focus:outline-none focus:border-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            id="c-input" placeholder="Write a comment...">
+          <button id="c-post"
+            class="font-medium text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Post</button>
+        </div>
+      </section>
+    </div>
   </div>
   <footer class="text-neutral-500 text-xs md:text-sm bg-neutral-950 px-6 py-6">
     <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
