@@ -107,8 +107,26 @@ async function onGithub(data) {
     });
 }
 
+function onHackatime(data) {
+    const htContainer = $("hackatime-container");
+    if (!htContainer) return;
+    if (data.project && data.project.key) {
+        $("ht-project").textContent = data.project.key;
+        const hours = Math.floor(data.project.total / 3600);
+        const minutes = Math.floor((data.project.total % 3600) / 60);
+        $("ht-total").textContent = `(${hours}h ${minutes}m)`;
+    } else {
+        $("ht-project").textContent = "No active projects right now";
+        $("ht-total").textContent = "";
+    }
+    if (data.time_today.startsWith("Start")) data.time_today = "0h 0m";
+    $("ht-today").textContent = data.time_today || "0h 0m";
+    $("ht-streak").textContent = data.streak || 0;
+    htContainer.classList.remove("hidden");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-    const path = window.location.pathname;
+    const path = window.location.pathname.toLowerCase();
     if (path == "/") {
         onloaded();
 
@@ -122,6 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
             postComment($("c-input").value);
         });
     } else {
+        if (path.startsWith("/projects")) {
+            fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onHackatime(d.hackatime));
+        }
+
         document.querySelectorAll("a").forEach(el => {
             if (el.href && el.hostname !== window.location.hostname) el.target = "_blank"; // make all external links open in new tabs, for pages other than home, do this on content loaded
         });
