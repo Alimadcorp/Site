@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (path.startsWith("/blog/")) {
-      const blogPath = path.replace("/", ":");
+      const blogPath = path.replaceAll("/", ":").replace(".html", "");
       loadComments(blogPath); // each blog has its own comment section
       setupLive("alimad.co" + blogPath);
     }

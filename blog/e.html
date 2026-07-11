@@ -1,13 +1,136 @@
-Alimad is taking the year off
+<!DOCTYPE html>
+<html>
 
-[2 October, 2025]
-From 4 October 2025 to somewhere in August 2026, I will not be actively available on the internet. This is due to my ICS final exams coming closer, which will be the end of intermediate education for me. This also means that I will not have access to my desktop, my Vercel, VS, or Cloudflare accounts. There will be no changes in any of Alimad services during this period. I will be setting up a few things that will keep stuff running up until next year.
-First of all, I host a game jam every year called the Banan Game Jam. This year, it's starting a little late, but it will run from 12 to 24 October. I have set up a server that will automatically do the theme reveal on itch. Anyone can sign up at https://itch.io/jam/banana-game-jam-3
-Second of all, https://server.alimad.co|server.alimad.co is back up again. 
-Third, I wanted to make a game for Daydream Global, but I'm not sure if I'll be able to in one day.
-I will still sometimes check my Slack and Discord messages, thanks to access.remote.
-Finally, I wanna say goodbye and good luck to everyone at HackClub, and all my friends. Thank you, F1nn, Sabio, Sky, [Redacted], Alvina, ErrorCode, Artemis, Ranran, Sir Rowan the Great, Sir Neon the Great, Sir Cyao, and everyone else. I made a lot of progress this year, and it's all because of you guys. You all deserve a ton of appreciation for all the hard work you put in to make the world a better, safer place, for someone, or for everyone. Thank you. Thank you, HackClub, LitCell, and  Vercel. I hope I study so well to get admission in a good university. I hope I get to express myself to those in the world whom I hold close and those whom I don't know. I hope I get to see another day when I am back at HackClub, working on yet another inspiring project. I hope.
-Goodbye.
+<head>
+  <!--OpenGraphEntryPoint-->
+  <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/script.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
 
-_Written by Muhammad Ali_
-_2 October, 2025_
+<body class='p-0 bg-black text-neutral-200 antialiased font-sans selection:bg-green-400 selection:text-black'>
+  <p id="saturated"></p>
+  <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0" id="daddy">
+    <nav class="border border-emerald-400 text-neutral-400 p-3">
+      <div class="flex flex-wrap items-center gap-3 text-sm font-medium">
+        <a href="/" class="transition-colors">Home</a>
+        <a href="/about" class="transition-colors">About</a>
+        <a href="/projects" class="transition-colors">Projects</a>
+        <span class="text-white font-semibold flex gap-0">
+          <a href="/blog" class="transition-colors">Blog</a>
+          <a href="/blog/e" class="transition-colors">/E</a>
+        </span>
+        <a class="transition-colors" href="/resume">Résumé</a>
+        <a href="/contact" class="transition-colors">Contact</a>
+      </div>
+    </nav>
+    <div id="content" class="p-0 m-0">
+      <main class="bg-transparent border border-emerald-400 border-b-0 p-4 md:p-8 space-y-4">
+        <div class="space-y-2.5">
+          <h1 id="blogTitle"
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-500 tracking-tight leading-tight">
+            Alimad is taking the year off
+          </h1>
+
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm font-medium">
+            <p class="text-neutral-400 flex items-center gap-1.5">
+              <span class="text-neutral-500">1 min 25 second read</span>
+            </p>
+
+
+            <p onclick="setUbuntu()" id="readmode"
+              class="text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer inline-flex items-center gap-3 hover:underline">
+              <span class="hidden sm:inline text-neutral-600">•</span>
+              Enable read mode
+            </p>
+          </div>
+        </div>
+        <p id="blogContent">
+          [2 October, 2025]
+          From 4 October 2025 to somewhere in August 2026, I will not be actively available on the internet.
+          This is due to my ICS final exams coming closer, which will be the end of intermediate education for
+          me. This also means that I will not have access to my desktop, my Vercel, VS, or Cloudflare
+          accounts. There will be no changes in any of Alimad services during this period. I will be setting
+          up a few things that will keep stuff running up until next year.
+          First of all, I host a game jam every year called the Banan Game Jam. This year, it's starting a
+          little late, but it will run from 12 to 24 October. I have set up a server that will automatically
+          do the theme reveal on itch. Anyone can sign up at https://itch.io/jam/banana-game-jam-3
+          Second of all, https://server.alimad.co|server.alimad.co is back up again.
+          Third, I wanted to make a game for Daydream Global, but I'm not sure if I'll be able to in one day.
+          I will still sometimes check my Slack and Discord messages, thanks to access.remote.
+          Finally, I wanna say goodbye and good luck to everyone at HackClub, and all my friends. Thank you,
+          F1nn, Sabio, Sky, [Redacted], Alvina, ErrorCode, Artemis, Ranran, Sir Rowan the Great, Sir Neon the
+          Great, Sir Cyao, and everyone else. I made a lot of progress this year, and it's all because of you
+          guys. You all deserve a ton of appreciation for all the hard work you put in to make the world a
+          better, safer place, for someone, or for everyone. Thank you. Thank you, HackClub, LitCell, and
+          Vercel. I hope I study so well to get admission in a good university. I hope I get to express myself
+          to those in the world whom I hold close and those whom I don't know. I hope I get to see another day
+          when I am back at HackClub, working on yet another inspiring project. I hope.
+          Goodbye.
+
+          _Written by Muhammad Ali_
+          _2 October, 2025_
+        </p>
+        <div
+          class="flex flex-wrap items-center text-xs sm:text-sm text-neutral-300 gap-y-2 [&>span+span]:before:content-['•'] [&>span+span]:before:mx-1 sm:[&>span+span]:before:mx-2 [&>span+span]:before:text-neutral-500">
+          <span>
+            <a href="https://cdn.alimad.co/f/Personal/blog/e.txt"
+              class="text-emerald-400 hover:text-emerald-300 transition-colors">E</a>
+          </span>
+          <span id="publishDate">Thu, 02 Oct 2025</span>
+          <span>339 words</span>
+          <span class="flex items-center gap-1">
+            Visits:
+            <span id="totalPings" class="text-neutral-100 font-medium">0</span>
+            <span id="dtotalPings" class="text-emerald-500"></span>
+          </span>
+          <span class="flex items-center gap-1">
+            Visitors:
+            <span id="uniqueIds" class="text-neutral-100 font-medium">0</span>
+            <span id="duniqueIds" class="text-emerald-500"></span>
+          </span>
+          <span class="flex items-center gap-1">
+            Online:
+            <span id="onlineCount" class="text-neutral-100 font-medium">0</span>
+          </span>
+        </div>
+      </main>
+      <section class="bg-transparent border border-emerald-400 p-5 space-y-4">
+        <h2 class="text-lg font-semibold text-emerald-500 font-semibold">
+          Comments!
+        </h2>
+        <div id="comments"
+          class="max-h-60 overflow-y-auto break-words space-y-1 leading-relaxed text-sm bg-black p-4 border border-emerald-400 pr-2">
+          <p class="text-neutral-500">Loading<span class="text-xs">...</span></p>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between gap-2 mt-2">
+          <input
+            class="flex-grow bg-black text-neutral-200 border border-emerald-400 px-4 py-2 text-sm focus:outline-none focus:border-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            id="c-input" placeholder="Write a comment...">
+          <button id="c-post"
+            class="font-medium text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Post</button>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="text-neutral-500 text-xs md:text-sm bg-neutral-950 px-6 py-6">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <span class="flex flex-row gap-6 font-medium">
+        <a href="https://alimad.co" class="transition-colors">Home</a>
+        <a href="https://blog.alimad.co/e" class="transition-colors">Old Client</a>
+        <a href="https://youtube.com/@alimadco" class="transition-colors">Youtube</a>
+        <a href="https://github.com/Alimadcorp" class="transition-colors">Github</a>
+      </span>
+      <p class="flex items-center gap-2 text-neutral-400 font-medium">
+        Made by Muhammad Ali
+        <span class="bg-black px-2.5 py-1 border border-emerald-400 text-xs text-emerald-400"
+          title="Time for me right now" id="time"></span>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
