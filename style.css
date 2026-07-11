@@ -26,6 +26,14 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Excalifont', Ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* TODO: remove ts */
+
+* {
+    padding: 0;
+    margin: 0;
 }
 
 a:hover {

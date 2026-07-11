@@ -5,20 +5,22 @@ const path = require('path');
 
 const domain = 'https://alimad.co';
 
-const exclude = "api,CNAME,history.txt,README.md,robots.txt,script.js,sitemap.js,sitemap.xml,meow.js,style.css".split(",");
+const exclude = "api,CNAME,history.txt,README.md,robots.txt,script.js,sitemap.js,sitemap.xml,meow.js,style.css,todo.txt".split(",");
 
-function generate() {
-    let dir = __dirname;
+let urls = [];
+
+let indexModDate = new Date().toISOString().split('T')[0];
+
+if (fs.existsSync(path.join(__dirname, 'index.html'))) {
+    indexModDate = fs.statSync(path.join(__dirname, 'index.html')).mtime.toISOString().split('T')[0];
+}
+
+urls.push({ url: domain, lastmod: indexModDate });
+
+function generate(dadd) {
+    let dir = __dirname + dadd;
+    console.log(dir);
     const files = fs.readdirSync(dir);
-
-    let urls = [];
-
-    let indexModDate = new Date().toISOString().split('T')[0];
-    if (fs.existsSync(path.join(dir, 'index.html'))) {
-        indexModDate = fs.statSync(path.join(dir, 'index.html')).mtime.toISOString().split('T')[0];
-    }
-
-    urls.push({ url: domain, lastmod: indexModDate });
 
     files.forEach(f => {
         if (f.startsWith('.') || exclude.includes(f)) return;
@@ -39,13 +41,22 @@ function generate() {
             const fileModDate = stat.mtime.toISOString().split('T')[0];
 
             urls.push({
-                url: domain + route,
+                url: domain + dadd.replace("\\", "/") + route,
                 lastmod: fileModDate
             });
+        } else {
+            generate("\\" + f);
         }
     });
+}
 
-    const base = `<?xml version="1.0" encoding="UTF-8"?>
+generate("");
+
+console.log(urls);
+urls = urls.sort((a, b) => a.url.localeCompare(b.url));
+console.log(urls);
+
+const base = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(item => `  <url>
     <loc>${item.url}</loc>
@@ -55,9 +66,5 @@ ${urls.map(item => `  <url>
   </url>`).join("\n")}
 </urlset>`;
 
-    console.log(base);
-    fs.writeFileSync(path.join(dir, 'sitemap.xml'), base);
-    console.log("Done");
-}
-
-generate();
+fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), base);
+console.log("Done");
