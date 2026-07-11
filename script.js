@@ -39,7 +39,10 @@ const postComment = async (text) => {
   loadComments();
 };
 
+let liveApp;
+
 function setupLive(app) {
+  liveApp = app;
   // trigger an initial load of online users, then call the function 15 seconds after successfully getting the count previously :sob:
   (
     function live() {
@@ -108,7 +111,7 @@ async function onLive(data) {
 }
 
 function processLocalCount(key, val) {
-  const p = "live.alimad.co:last:";
+  const p = "live.alimad.co:last:" + liveApp;
   const last = parseInt(localStorage.getItem(p + key));
   localStorage.setItem(p + key, val);
   return val - last - (key == "totalPings" ? 1 : 0);
