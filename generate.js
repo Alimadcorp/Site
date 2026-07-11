@@ -76,7 +76,7 @@ function parseToHTML(raw) {
         let containerClass = "my-6 grid gap-4 w-full ";
         if (mediaItems.length === 1) containerClass = "my-6 flex justify-center w-full max-w-3xl mx-auto";
         else if (mediaItems.length === 2) containerClass += "grid-cols-1 sm:grid-cols-2";
-        else containerClass += "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+        else containerClass += "grid-cols-1";
 
         html += `<div class="${containerClass}">\n`;
 
@@ -198,9 +198,10 @@ function processFile(filePath) {
   if (description.length === 150) description += '...';
 
   let imageUrl = favicon;
-  const firstImg = $('img').first().attr('src');
-  if (firstImg && firstImg.startsWith('http')) {
-    imageUrl = firstImg;
+  const firstBlogImg = $('#blogContent img').first().attr('src') || $('img').first().attr('src');
+
+  if (firstBlogImg && firstBlogImg.startsWith('http')) {
+    imageUrl = firstBlogImg;
   }
 
   const relativePath = path.relative(blogDir, filePath)
@@ -267,7 +268,7 @@ function processFile(filePath) {
 
   const blogContentElement = $('#blogContent');
   if (blogContentElement.length) {
-    const rawText = blogContentElement.text().trim();
+    const rawText = blogContentElement.text().trim().replaceAll(/\n+/g, "\n");
     const parsedHtmlString = parseToHTML(rawText);
     blogContentElement.replaceWith(`<div id="blogContent" class="text-neutral-300">\n${parsedHtmlString}\n</div>`);
   }

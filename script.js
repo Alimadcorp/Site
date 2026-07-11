@@ -28,18 +28,34 @@ setExcalifont();
 const $ = (id) => document.getElementById(id);
 const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
-const loadComments = (page) => fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage" + page).then(r => r.json()).then(d => onComments(d));
+let liveApp = "";
+let commentApp = "";
+
+const loadComments = (page = commentApp) => {
+  commentApp = page;
+  fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage" + page).then(r => r.json()).then(d => onComments(d));
+};
+
+const setupComments = (page) => {
+  $("c-input").addEventListener("keydown", (e) => {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    postComment($("c-input").value);
+  });
+
+  $("c-post").addEventListener("click", () => {
+    postComment($("c-input").value);
+  });
+}
 
 const postComment = async (text) => {
   if (text == "" || typeof text != "string") return;
   $("c-input").disabled = $("c-post").disabled = true;
-  await fetch("https://log.alimad.co/api/log?channel=comments:alimadhomepage&text=" + text);
+  await fetch(`https://log.alimad.co/api/log?channel=comments:alimadhomepage${commentApp}&text=${text}`);
   $("c-input").disabled = $("c-post").disabled = false;
   $("c-input").value = "";
   loadComments();
 };
-
-let liveApp;
 
 function setupLive(app) {
   liveApp = app;
@@ -65,6 +81,7 @@ async function onloaded() { // only called when on main page
   fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onGithub(d));
   setupLive("alimad.co");
   loadComments();
+  setupComments();
 }
 
 // make sure that if a user rapidly refreshes the page, do not log visits, this reduces inflation of visits
@@ -174,18 +191,9 @@ function onHackatime(data) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname.toLowerCase();
+
   if (path == "/") {
     onloaded();
-
-    $("c-input").addEventListener("keydown", (e) => {
-      if (e.key !== 'Enter') return;
-      e.preventDefault();
-      postComment($("c-input").value);
-    });
-
-    $("c-post").addEventListener("click", () => {
-      postComment($("c-input").value);
-    });
   } else {
     if (path.startsWith("/projects")) {
       const cProject = () => fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onHackatime(d.hackatime));
@@ -195,8 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (path.startsWith("/blog/")) {
       const blogPath = path.replaceAll("/", ":").replace(".html", "");
-      loadComments(blogPath); // each blog has its own comment section
       setupLive("alimad.co" + blogPath);
+      loadComments(blogPath); // each blog has its own comment section
+      setupComments();
     }
 
     document.querySelectorAll("a").forEach(el => {
