@@ -1,8 +1,10 @@
 */node_modules
 */bun.lock
+node_modules
+package.json
+package-lock.json
 .env*
 .vercel
-package-lock.json
 
 .history.txt
 hidden/
