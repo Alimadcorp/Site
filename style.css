@@ -29,11 +29,11 @@ body {
     font-family: 'Excalifont', Ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* TODO: remove ts */
-
-* {
-    padding: 0;
-    margin: 0;
+nav {
+    transform: translateY(1px);
+    /* the nav has a bottom border, the rest of content has a top border, merge these borders
+    instead of removing the bottom border of the nav, so that when the page transition slides,
+    the elements appear as boxes, and borders appear properly ! */
 }
 
 a:hover {
