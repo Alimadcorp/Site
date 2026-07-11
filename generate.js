@@ -50,80 +50,101 @@ function parseInline(line) {
 function parseToHTML(raw) {
   const lines = raw.split(/\r?\n/);
   let html = '';
-  let buffer = [];
-
-  function flushBuffer() {
-    if (buffer.length > 0) {
-      html += `<p class="mt-1 mb-2 leading-relaxed text-base">${parseInline(buffer.join(' '))}</p>\n`;
-      buffer = [];
-    }
-  }
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
 
     if (!line) {
-      flushBuffer();
+      html += '<div class="h-4"></div>\n';
       continue;
     }
 
     if (line.match(/^<([^>]+)>$/)) {
-      flushBuffer();
       let j = i;
       const mediaItems = [];
+
       while (j < lines.length) {
         const res = lines[j].trim().match(/^<([^>]+)>$/);
         if (!res) break;
+
         const [url, name] = res[1].split('|');
         if (url) mediaItems.push({ url, name });
         j++;
       }
 
-      let containerClass = "my-6 grid gap-4 w-full ";
-      if (mediaItems.length === 1) containerClass = "my-6 flex justify-center w-full max-w-3xl mx-auto";
-      else if (mediaItems.length === 2) containerClass += "grid-cols-1 sm:grid-cols-2";
-      else containerClass += "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+      if (mediaItems.length > 0) {
+        let containerClass = "my-6 grid gap-4 w-full ";
+        if (mediaItems.length === 1) containerClass = "my-6 flex justify-center w-full max-w-3xl mx-auto";
+        else if (mediaItems.length === 2) containerClass += "grid-cols-1 sm:grid-cols-2";
+        else containerClass += "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
 
-      html += `<div class="${containerClass}">\n`;
-      mediaItems.forEach(item => {
-        const { url, name } = item;
-        let inner = '', wrapClass = "relative group flex flex-col items-center justify-center bg-black/40 rounded-xl overflow-hidden border border-emerald-900/30";
-        if (/\.(jpe?g|png|gif|webp)$/i.test(url)) inner = `<img src="${url}" alt="${escapeHtml(name || '')}" class="w-full h-auto max-h-[60vh] object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy">`;
-        else if (/\.mp4$/i.test(url)) inner = `<video src="${url}" controls class="w-full h-auto max-h-[60vh] object-contain bg-black" title="${escapeHtml(name || '')}"></video>`;
-        else if (/\.mp3$/i.test(url)) { wrapClass = "w-full p-4 bg-black/40 rounded-xl border border-emerald-900/30 flex flex-col items-center gap-3"; inner = `<audio src="${url}" controls class="w-full"></audio>${name ? `<span class="text-sm text-neutral-400 font-medium">${escapeHtml(name)}</span>` : ''}`; }
-        else inner = `<img src="${url}" alt="${escapeHtml(name || '')}" class="w-full h-auto max-h-[60vh] object-cover" loading="lazy">`;
-        if (name && !/\.mp3$/i.test(url)) inner += `<div class="absolute bottom-3 right-3 text-xs text-white bg-black/80 px-2.5 py-1 backdrop-blur-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">${escapeHtml(name)}</div>`;
-        html += `<div class="${wrapClass}">${inner}</div>\n`;
-      });
-      html += `</div>\n`;
-      i = j - 1;
-      continue;
+        html += `<div class="${containerClass}">\n`;
+
+        mediaItems.forEach(item => {
+          const { url, name } = item;
+          let inner = '';
+          let wrapClass = "relative group flex flex-col items-center justify-center bg-black/40 rounded-xl overflow-hidden border border-emerald-900/30";
+
+          if (/\.(jpe?g|png|gif|webp)$/i.test(url)) {
+            inner = `<img src="${url}" alt="${escapeHtml(name || '')}" class="w-full h-auto max-h-[60vh] object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy">`;
+          } else if (/\.mp4$/i.test(url)) {
+            inner = `<video src="${url}" controls class="w-full h-auto max-h-[60vh] object-contain bg-black" title="${escapeHtml(name || '')}"></video>`;
+          } else if (/\.mp3$/i.test(url)) {
+            wrapClass = "w-full p-4 bg-black/40 rounded-xl border border-emerald-900/30 flex flex-col items-center gap-3";
+            inner = `<audio src="${url}" controls class="w-full"></audio>${name ? `<span class="text-sm text-neutral-400 font-medium">${escapeHtml(name)}</span>` : ''}`;
+          } else {
+            inner = `<img src="${url}" alt="${escapeHtml(name || '')}" class="w-full h-auto max-h-[60vh] object-cover" loading="lazy">`;
+          }
+
+          if (name && !/\.mp3$/i.test(url)) {
+            inner += `<div class="absolute bottom-3 right-3 text-xs text-white bg-black/80 px-2.5 py-1 backdrop-blur-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">${escapeHtml(name)}</div>`;
+          }
+          html += `<div class="${wrapClass}">${inner}</div>\n`;
+        });
+
+        html += `</div>\n`;
+        i = j - 1;
+        continue;
+      }
     }
 
     if (line.startsWith(":::summary")) {
-      flushBuffer();
       const title = line.slice(10).trim();
-      let depth = 1, j = i + 1, bodyLines = [];
+      let depth = 1;
+      let j = i + 1;
+      const bodyLines = [];
+
       for (; j < lines.length; j++) {
-        if (lines[j].startsWith(":::summary")) { depth++; bodyLines.push(lines[j]); }
-        else if (lines[j].startsWith(":::")) { depth--; if (depth === 0) break; bodyLines.push(lines[j]); }
-        else bodyLines.push(lines[j]);
+        if (lines[j].startsWith(":::summary")) {
+          depth++;
+          bodyLines.push(lines[j]);
+        } else if (lines[j].startsWith(":::")) {
+          depth--;
+          if (depth === 0) break;
+          bodyLines.push(lines[j]);
+        } else {
+          bodyLines.push(lines[j]);
+        }
       }
-      html += `<details class="my-3 bg-black/40 border border-emerald-900/30 rounded-lg p-3"><summary class="cursor-pointer text-emerald-400 text-lg font-semibold outline-none">${escapeHtml(title)}</summary><div class="pl-4 pt-3 space-y-1 border-l-2 border-emerald-900/30 ml-2 mt-2">${parseToHTML(bodyLines.join("\n"))}</div></details>\n`;
+
+      html += `<details class="my-3 bg-black/40 border border-emerald-900/30 rounded-lg p-3">
+                <summary class="cursor-pointer text-emerald-400 text-lg font-semibold outline-none">${escapeHtml(title)}</summary>
+                <div class="pl-4 pt-3 space-y-1 border-l-2 border-emerald-900/30 ml-2 mt-2">
+                    ${parseToHTML(bodyLines.join("\n"))}
+                </div>
+            </details>\n`;
       i = j;
       continue;
     }
-    if (line.startsWith("#")) {
-      flushBuffer();
-      if (line.startsWith("##")) html += `<h2 class="mt-6 mb-2 text-2xl font-semibold" style="color: #ddd">${parseInline(line.slice(2).trim())}</h2>\n`;
-      else html += `<h1 class="mt-8 mb-3 text-3xl font-bold" style="color: #ddd">${parseInline(line.slice(1).trim())}</h1>\n`;
-      continue;
-    }
 
-    // 5. Standard Text
-    buffer.push(line);
+    if (line.startsWith("##")) {
+      html += `<h2 class="mt-6 mb-2 text-2xl font-semibold" style="color: #ddd">${parseInline(line.slice(2).trim())}</h2>\n`;
+    } else if (line.startsWith("#")) {
+      html += `<h1 class="mt-8 mb-3 text-3xl font-bold" style="color: #ddd">${parseInline(line.slice(1).trim())}</h1>\n`;
+    } else {
+      html += `<p class="mt-1 mb-2 leading-relaxed text-base">${parseInline(line)}</p>\n`;
+    }
   }
-  flushBuffer();
   return html;
 }
 
