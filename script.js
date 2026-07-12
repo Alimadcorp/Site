@@ -31,9 +31,9 @@ const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 let liveApp = "";
 let commentApp = "";
 
-const loadComments = (page = commentApp) => {
+const loadComments = (page = "alimadhomepage") => {
   commentApp = page;
-  fetch("https://log.alimad.co/api/pull?channel=comments:alimadhomepage" + page).then(r => r.json()).then(d => onComments(d));
+  fetch("https://log.alimad.co/api/pull?channel=comments:" + page).then(r => r.json()).then(d => onComments(d));
 };
 
 const setupComments = (page) => {
@@ -51,7 +51,7 @@ const setupComments = (page) => {
 const postComment = async (text) => {
   if (text == "" || typeof text != "string") return;
   $("c-input").disabled = $("c-post").disabled = true;
-  await fetch(`https://log.alimad.co/api/log?channel=comments:alimadhomepage${commentApp}&text=${text}`);
+  await fetch(`https://log.alimad.co/api/log?channel=comments:${commentApp}&text=${text}`);
   $("c-input").disabled = $("c-post").disabled = false;
   $("c-input").value = "";
   loadComments();
