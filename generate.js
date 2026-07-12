@@ -127,12 +127,7 @@ function parseToHTML(raw) {
         }
       }
 
-      html += `<details class="my-3 bg-black/40 border border-emerald-900/30 rounded-lg p-3">
-                <summary class="cursor-pointer text-emerald-400 text-lg font-semibold outline-none">${escapeHtml(title)}</summary>
-                <div class="pl-4 pt-3 space-y-1 border-l-2 border-emerald-900/30 ml-2 mt-2">
-                    ${parseToHTML(bodyLines.join("\n"))}
-                </div>
-            </details>\n`;
+      html += `<details class="my-3 bg-black/40 border border-emerald-900/30 rounded-lg p-3"><summary class="cursor-pointer text-emerald-400 text-lg font-semibold outline-none">${escapeHtml(title)}</summary><div class="pl-4 pt-3 space-y-1 border-l-2 border-emerald-900/30 ml-2 mt-2">${parseToHTML(bodyLines.join("\n"))}</div></details>\n`;
       i = j;
       continue;
     }
@@ -263,7 +258,7 @@ function processFile(filePath) {
   if (jsonLdScript.length) {
     jsonLdScript.html(JSON.stringify(schemaData, null, 2));
   } else {
-    $('head').append(`    <script type="application/ld+json">\n${JSON.stringify(schemaData, null, 2)}\n    </script>\n`);
+    $('head').append(`<script type="application/ld+json">\n${JSON.stringify(schemaData, null, 2)}\n</script>\n`);
   }
 
   const blogContentElement = $('#blogContent');
@@ -273,7 +268,7 @@ function processFile(filePath) {
     blogContentElement.replaceWith(`<div id="blogContent" class="text-neutral-300">\n${parsedHtmlString}\n</div>`);
   }
 
-  $('body').append('\n    <div id="saturated" style="display: none;"></div>\n');
+  $('body').append('\n<div id="saturated" style="display: none;"></div>\n');
 
   fs.writeFileSync(filePath, $.html());
 }
