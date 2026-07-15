@@ -1,0 +1,71 @@
+This is a list of my projects, noted down before i fill up projects.html
+
+TYP={	1: alimad.itch.io/NAME,
+		2: NAME.alimad.co,
+		3: itch.io/jam/NAME
+		4: github.com/Alimadcorp/NAME
+	}
+
+TYP	NAME				DATE			NOTES
+1	makeways			Jun 30, 2022
+
+1	click-challenge		Jan 05, 2023
+1	swiveling-escape	Jan 28, 2023
+1	ballmad				Feb 12, 2023
+1	level-1				Feb 13, 2023
+1	sugarmad			Feb 23, 2023
+1	jumpbump			Jun 29, 2023
+1	polk				Jul 11, 2023
+1	buggle				Jul 14, 2023
+1	geometry-dash-sky	Jul 19, 2023
+1	laser-kings			Jul 30, 2023
+1	theminions			Aug 03, 2023
+3	alimad-banana-jam	Jul 25, 2023
+						Aug 04, 2023
+1	madrun				Sep 26, 2023
+
+1	shootmad			Mar 25, 2024
+1	madarea				Mar 29, 2024
+1	clicker				Apr 16, 2024
+1	pencildash3d		May 27, 2024
+1	zolitude			Jun 10, 2024	https://www.youtube.com/live/9MyoxiItjK8?si=BFldWjgrQyRVybHb&t=18821
+1	zomboozle			Jun 21, 2024	https://www.youtube.com/live/pGvXKpmeaZk?t=5099
+1	banana				Jul 09, 2024	https://www.youtube.com/live/5npUoM0S5DU?t=3141
+1	cellbit				Jul 14, 2024	https://www.youtube.com/live/2cS7x1z0Mus?t=1473
+1	madrix				Jul 19, 2024	https://www.twitch.tv/videos/2204586719?t=01h10m10s
+1	gmtkmad-2024		Aug 19, 2024	https://www.youtube.com/live/V8njmsfv7B8?t=3647
+3	banana-game-jam-2	Aug 30, 2024	https://www.youtube.com/watch?v=8IngCQopNIk
+						Sep 07, 2024
+1	relevate			Oct 06, 2024	https://www.youtube.com/live/A5ALZAKsrwg?t=953
+1	chromadicc			Nov 07, 2024	https://www.youtube.com/live/1_fFYoIv6Mg?si=DlO5VYCNOr3SgQwj&t=541
+1	wmj24				Dec 29, 2024
+
+2+4	webtools			Feb 24, 2025	WebBuildTools
+1+4	gleambox			Jun 06, 2025	https://www.youtube.com/live/OMOf9z4kaLg?t=292
+2+4	alt					Jun 19, 2025	MyWebsite
+2+4	somps				Jun 28, 2025
+2+4	live				Jul 01, 2025
+2+4	wordle				Jul 07, 2025	MyWebsite/commits/main/extras/wordle
+4	matrix				Jul 22, 2025
+1+4	react				Jul 27, 2025	reactmad
+1	gmtk25				Jul 29, 2025
+2+4	cdn					Sep 08, 2025	MadDrive
+2	up					Sep 11, 2025
+2+4	emoji				Sep 20, 2025	emojiCdn
+2+4	Blog				Sep 21, 2025	MyWebsite/tree/main/extras/blog
+2	server				Oct 02, 2025
+2+4	312					Oct 12, 2025
+3	banana-game-jam-3	Oct 15, 2025
+						Oct 24, 2025
+2+4	life				Nov 06, 2025
+2+4	Games				Nov 24, 2025	(HtmlGames) https://www.reddit.com/r/badUIbattles/comments/1p6xzil
+2+4	somps				Dec 10, 2025
+2+4	qr					Dec 15, 2025
+
+2+4	BesideU				Feb 01, 2026
+2+4	campfire			Feb 28, 2026
+2	Falooda				Mar 08, 2026
+2	Study				Mar 19, 2026
+2+4	Count				Apr 07, 2026
+1+4	worm				Jun 26, 2026
+2+4	Site				Jun 28, 2026
