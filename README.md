@@ -7,7 +7,37 @@ I used to have a personal website before made with NextJS, but it took too much 
 
 Built with classic HTML, Tailwind CSS, and JavaScript.
 
-`/api` uses ExpressJS for some backend typa stuff
+`/api` uses ExpressJS for some backend stats fetching
+
+## Usage
+
+### Setup
+
+Clone the repo & open:
+
+`git clone https://github.com/Alimadcorp/Site.git`
+
+`cd Site`
+
+Get a [github access token](https://github.com/settings/personal-access-tokens/new) with access to your repos
+
+Rename `.env.example` in `/api` to `.env.local`, and paste in your access token, and change the hackatime and github username to your usernames
+
+### Static files
+
+Statically host files:
+
+`python -m http.server 5500`
+
+### Backend setup
+
+`cd Site/api`
+
+Install npm dependencies:
+
+`npm install` (or use your package manager)
+
+`node index.js`
 
 ## Preview
 

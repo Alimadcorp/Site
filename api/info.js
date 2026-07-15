@@ -8,6 +8,9 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const GITHUB_TOKEN = process.env.GH_TOKEN;
+const GITHUB = process.env.GITHUB_USNM;
+const HAKATIME = process.env.HACKATIME_USNM;
+
 
 const theHeaders = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -15,7 +18,7 @@ const theHeaders = {
 };
 
 export async function getInfo() {
-    const username = "Alimadcorp";
+    const username = GITHUB;
     const base = `https://stats.github.alimad.co/api`;
 
     async function getPublicRepoCount() {
@@ -70,10 +73,10 @@ export async function getInfo() {
         const today2 = date(new Date(), 1);
         const tomorrow2 = date((new Date).setDate((new Date()).getDate() + 1), 1);
 
-        const r = await fetch(`https://hackatime.hackclub.com/api/v1/users/alimad/stats?start_date=${today}&end_date=${tomorrow}`);
+        const r = await fetch(`https://hackatime.hackclub.com/api/v1/users/${HAKATIME}/stats?start_date=${today}&end_date=${tomorrow}`);
         const d = await r.json();
 
-        const t = await fetch(`https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=alimad`)
+        const t = await fetch(`https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=${HAKATIME}`)
         const p = await t.json();
 
         let lp = { key: "", total: 0 };

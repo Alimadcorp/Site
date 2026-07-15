@@ -30,6 +30,7 @@ const esc = (e) => e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 
 let liveApp = "";
 let commentApp = "";
+let prod = false; // whether the site is on localhost or production
 
 const loadComments = (page = "alimadhomepage") => {
   commentApp = page;
@@ -78,7 +79,11 @@ function setupLive(app) {
 }
 
 async function onloaded() { // only called when on main page
-  fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onGithub(d));
+  // check if we are in a production or development environment
+  prod = !(/^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|\[::1\])$/.test(window.location.hostname) || window.location.protocol === 'file:');
+  // (got this snippet from a random ahh website)
+
+  fetch(prod ? "https://api.alimad.co/info" : "http://localhost:5501").then(r => r.json()).then(d => onGithub(d));
   setupLive("alimad.co");
   loadComments();
   setupComments();
