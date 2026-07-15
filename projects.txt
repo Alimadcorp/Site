@@ -38,7 +38,7 @@ TYP	NAME				DATE			NOTES
 						Sep 07, 2024
 1	relevate			Oct 06, 2024	https://www.youtube.com/live/A5ALZAKsrwg?t=953
 1	chromadicc			Nov 07, 2024	https://www.youtube.com/live/1_fFYoIv6Mg?si=DlO5VYCNOr3SgQwj&t=541
-1	wmj24				Dec 29, 2024
+1	wmj24				Dec 29, 2024	https://www.youtube.com/live/b0GAQHfWZEA?t=160
 
 2+4	webtools			Feb 24, 2025	WebBuildTools
 1+4	gleambox			Jun 06, 2025	https://www.youtube.com/live/OMOf9z4kaLg?t=292
