@@ -38,9 +38,17 @@ TYP	NAME				DATE			NOTES
 						Sep 07, 2024
 1	relevate			Oct 06, 2024	https://www.youtube.com/live/A5ALZAKsrwg?t=953
 1	chromadicc			Nov 07, 2024	https://www.youtube.com/live/1_fFYoIv6Mg?si=DlO5VYCNOr3SgQwj&t=541
+2+4	sendup				Nov 24, 2024	Nov 28, 2025
+2+4	theme				Dec 10, 2024
 1	wmj24				Dec 29, 2024	https://www.youtube.com/live/b0GAQHfWZEA?t=160
 
+2+4 meme				Jan 17, 2025
 2+4	webtools			Feb 24, 2025	WebBuildTools
+2+4	watch				Feb 27, 2025	stupidwatch https://play.google.com/store/apps/details?id=com.alimad.stupidwatch
+2	log					Mar 01, 2025
+2	proxy				Mar 16, 2025
+2	replace				Mar 16, 2025
+2+4	itch.xport			Mar 28, 2025
 1+4	gleambox			Jun 06, 2025	https://www.youtube.com/live/OMOf9z4kaLg?t=292
 2+4	alt					Jun 19, 2025	MyWebsite
 2+4	somps				Jun 28, 2025
@@ -58,9 +66,12 @@ TYP	NAME				DATE			NOTES
 3	banana-game-jam-3	Oct 15, 2025
 						Oct 24, 2025
 2+4	life				Nov 06, 2025
+2+4	chat				Nov 15, 2025
 2+4	Games				Nov 24, 2025	(HtmlGames) https://www.reddit.com/r/badUIbattles/comments/1p6xzil
 2+4	somps				Dec 10, 2025
+2+4	quantarax			Dec 14, 2025
 2+4	qr					Dec 15, 2025
+2	http				Dec 19, 2025
 
 2+4	BesideU				Feb 01, 2026
 2+4	campfire			Feb 28, 2026
