@@ -50,7 +50,7 @@ TYP	NAME				DATE			NOTES
 2	replace				Mar 16, 2025
 2+4	itch.xport			Mar 28, 2025
 1+4	gleambox			Jun 06, 2025	https://www.youtube.com/live/OMOf9z4kaLg?t=292
-2+4	alt					Jun 19, 2025	MyWebsite
+2+4	alt					Jun 19, 2025	D MyWebsite
 2+4	somps				Jun 28, 2025
 2+4	live				Jul 01, 2025
 2+4	wordle				Jul 07, 2025	MyWebsite/commits/main/extras/wordle
@@ -62,7 +62,7 @@ TYP	NAME				DATE			NOTES
 2+4	emoji				Sep 20, 2025	emojiCdn
 2+4	Blog				Sep 21, 2025	MyWebsite/tree/main/extras/blog
 2	server				Oct 02, 2025
-2+4	312					Oct 12, 2025
+2+4	312					Oct 12, 2025	D
 3	banana-game-jam-3	Oct 15, 2025
 						Oct 24, 2025
 2+4	life				Nov 06, 2025
@@ -73,10 +73,12 @@ TYP	NAME				DATE			NOTES
 2+4	qr					Dec 15, 2025
 2	http				Dec 19, 2025
 
-2+4	BesideU				Feb 01, 2026
-2+4	campfire			Feb 28, 2026
-2	Falooda				Mar 08, 2026
-2	Study				Mar 19, 2026
-2+4	Count				Apr 07, 2026
-1+4	worm				Jun 26, 2026
-2+4	Site				Jun 28, 2026
+2+4	BesideU				Feb 01, 2026	D
+2+4	campfire			Feb 28, 2026	D
+2	Falooda				Mar 08, 2026	D
+2	Study				Mar 19, 2026	D
+2+4	Count				Apr 07, 2026	D
+1+4	worm				Jun 26, 2026	D F1nndegamer/Spin-to-win
+2+4	Site				Jun 28, 2026	D
+
+<a class="text-emerald-400" href="https://"></a>
