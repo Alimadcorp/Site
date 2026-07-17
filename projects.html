@@ -2,28 +2,28 @@
 <html>
 
 <head>
-  <title>Alimad Co</title>
-  <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
-  <meta name="description" content="Muhammad Ali's Projects">
-  <meta name="keywords"
-    content="Muhammad Ali, Alimad, Alimad Co, Alimad Corporations, Alimad Food, Alimad Foods, Game Developers of Pakistan, Full Stack Web Developer Lahore, Software Engineer FAST-NUCES, Unity Engine, Godot Engine, FAST NUCES Student, Hack Club projects, Alimad portfolio, Alimad Projects">
-  <meta name="author" content="Muhammad Ali">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://alimad.co/projects">
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Alimad Co: Projects">
-  <meta property="og:description" content="Muhammad Ali's Projects">
-  <meta property="og:url" content="https://alimad.co/projects">
-  <meta property="og:image" content="https://cdn.alimad.co/f/static/icon/favicon.png">
-  <meta property="og:site_name" content="Alimad Corporations">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Alimad Co: Projects">
-  <meta name="twitter:description" content="Muhammad Ali's Projects">
-  <meta name="twitter:image" content="https://cdn.alimad.co/f/static/icon/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src='https://cdn.tailwindcss.com'></script>
-  <script src="script.js"></script>
-  <script type="application/ld+json">
+ <title>Alimad Co</title>
+ <link rel="icon" href="https://cdn.alimad.co/f/static/icon/favicon.png">
+ <meta name="description" content="Muhammad Ali's Projects">
+ <meta name="keywords"
+  content="Muhammad Ali, Alimad, Alimad Co, Alimad Corporations, Alimad Food, Alimad Foods, Game Developers of Pakistan, Full Stack Web Developer Lahore, Software Engineer FAST-NUCES, Unity Engine, Godot Engine, FAST NUCES Student, Hack Club projects, Alimad portfolio, Alimad Projects">
+ <meta name="author" content="Muhammad Ali">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://alimad.co/projects">
+ <meta property="og:type" content="profile">
+ <meta property="og:title" content="Alimad Co: Projects">
+ <meta property="og:description" content="Muhammad Ali's Projects">
+ <meta property="og:url" content="https://alimad.co/projects">
+ <meta property="og:image" content="https://cdn.alimad.co/f/static/icon/favicon.png">
+ <meta property="og:site_name" content="Alimad Corporations">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="Alimad Co: Projects">
+ <meta name="twitter:description" content="Muhammad Ali's Projects">
+ <meta name="twitter:image" content="https://cdn.alimad.co/f/static/icon/favicon.png">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src='https://cdn.tailwindcss.com'></script>
+ <script src="script.js"></script>
+ <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -40,224 +40,960 @@
         ]
     }
     </script>
-  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style.css">
 </head>
 
 <body class='p-0 bg-black text-neutral-200 antialiased font-sans selection:bg-green-400 selection:text-black'>
-  <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0" id="daddy">
-    <nav class="border border-emerald-400 text-neutral-400 p-3">
-      <div class="flex flex-wrap items-center gap-3 text-sm font-medium">
-        <a href="/" class="transition-colors">Home</a>
-        <a href="/about" class="transition-colors">About</a>
-        <a href="/projects" class="text-white font-semibold transition-colors">Projects</a>
-        <a href="/blog" class="transition-colors">Blog</a>
-        <a class="transition-colors" href="/resume">Résumé</a>
-        <a href="/contact" class="transition-colors">Contact</a>
+ <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0" id="daddy">
+  <nav class="border border-emerald-400 text-neutral-400 p-3">
+   <div class="flex flex-wrap items-center gap-3 text-sm font-medium">
+    <a href="/" class="transition-colors">Home</a>
+    <a href="/about" class="transition-colors">About</a>
+    <a href="/projects" class="text-white font-semibold transition-colors">Projects</a>
+    <a href="/blog" class="transition-colors">Blog</a>
+    <a class="transition-colors" href="/resume">Résumé</a>
+    <a href="/contact" class="transition-colors">Contact</a>
+   </div>
+  </nav>
+  <div id="content" class="p-0 m-0">
+   <main class="bg-transparent border border-emerald-400 p-6 md:p-8 space-y-5">
+    <div class="flex items-center gap-3 justify-center md:justify-start">
+     <h1 class="text-2xl md:text-5xl font-bold text-emerald-500">My Projects</h1>
+     <img src="https://e.alimad.co/:hackerbongocat" class="w-10 h-10 object-contain" alt=":hackerbongocat:">
+    </div>
+
+    <p class="text-neutral-300 leading-relaxed text-base md:text-lg">
+     Not 100% sure these are all of them, but here's a list of currently alive projects of mine:
+    </p>
+
+    <div id="hackatime-container" class="p-4 border border-emerald-400/30 bg-emerald-950/10">
+     <h2 class="text-xl text-emerald-400 font-bold mb-3 flex items-center gap-2">
+      Active project
+     </h2>
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+      <div>
+       <span class="block text-neutral-500 text-xs mb-1">Currently working on:</span>
+       <span id="ht-project" class="font-medium text-neutral-200">--</span>
+       <span id="ht-total" class="text-xs text-emerald-500 ml-1"></span>
       </div>
-    </nav>
-    <div id="content" class="p-0 m-0">
-      <main class="bg-transparent border border-emerald-400 p-6 md:p-8 space-y-5">
-        <div class="flex items-center gap-3 justify-center md:justify-start">
-          <h1 class="text-2xl md:text-5xl font-bold text-emerald-500">My Projects</h1>
-          <img src="https://e.alimad.co/:hackerbongocat" class="w-10 h-10 object-contain" alt=":hackerbongocat:">
-        </div>
-
-        <p class="text-neutral-300 leading-relaxed text-base md:text-lg">
-          Not 100% sure these are all of them, but here's a list of currently alive projects of mine:
-        </p>
-
-        <div id="hackatime-container" class="p-4 border border-emerald-400/30 bg-emerald-950/10">
-          <h2 class="text-xl text-emerald-400 font-bold mb-3 flex items-center gap-2">
-            Active project
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-            <div>
-              <span class="block text-neutral-500 text-xs mb-1">Currently working on:</span>
-              <span id="ht-project" class="font-medium text-neutral-200">--</span>
-              <span id="ht-total" class="text-xs text-emerald-500 ml-1"></span>
-            </div>
-            <div>
-              <span class="block text-neutral-500 text-xs mb-1">Time Today</span>
-              <span id="ht-today" class="font-medium text-neutral-200">--</span>
-            </div>
-            <div>
-              <span class="block text-neutral-500 text-xs mb-1">Streak</span>
-              <span class="font-medium text-neutral-200"><span id="ht-streak">--</span> Days</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-5 pt-5 border-t border-emerald-400">
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://alimad.co" class="text-emerald-400 hover:underline">Site</a>
-                <a href="https://github.com/Alimadcorp/Site" class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">June 28, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              Static remake of my old website, as it was taking too much CPU runtime credit on Vercel.
-            </p>
-          </article>
-
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://alimad.itch.io/worm" class="text-emerald-400 hover:underline">Worm</a>
-                <a href="https://github.com/F1nndegamer/Spin-to-win"
-                  class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">June 26, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              A game we (me, F1nn, Arman, two others) made for hackclub <a class="text-emerald-400"
-                href="https://jamegam.hackclub.com">jamegam</a>
-              and submitted to The Super Serious Juniper Dev Game Jam.
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://count.alimad.co" class="text-emerald-400 hover:underline">CountMad</a>
-                <a href="https://github.com/Alimadcorp/Count" class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">April 7, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              An basic online counter app based on the emerging SpacetimeDB.
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://study.alimad.co" class="text-emerald-400 hover:underline">Alimad Study Archive</a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">March 19, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              My first peronal website, where I shared my coding stats, socials, status, even currently open
-              window name!
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://falooda.alimad.co" class="text-emerald-400 hover:underline">Falooda Fanatics</a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">March 8, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              A website for the Falooda Fanatics, which is a club running under HackClub, in Faislabad.
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://instagram.com/campfire.lahore" class="text-emerald-400 hover:underline">Campfire
-                  Lahore</a>
-                <a href="https://github.com/Alimadcorp/campfire"
-                  class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">Feb 28 - Mar 1, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              A sattelite of <a class="text-emerald-400" href="https://campfire.hackclub.com">Hackclub Campfire</a>, an
-              in-person game jam hackathon that I and my college friends ran in Lahore, for two days, we were sponsored
-              by <a class="text-emerald-400" href="https://gamescollective.pk">The Games Collective</a>!
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://besideu.alimad.co" class="text-emerald-400 hover:underline">BesideU</a>
-                <a href="https://github.com/Alimadcorp/BesideU"
-                  class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">Feb 1, 2026</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              A failed attempt at making a revolutionary location aware social app for the students and travellers of
-              Pakistan. (Flutter rewrite coming soon)
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://312.alimad.co" class="text-emerald-400 hover:underline">312 Encoder</a>
-                <a href="https://github.com/Alimadcorp/312" class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class="text-xs text-neutral-500 text-center">October 12, 2025</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              An encoder/decoder for the <a href="https://youtube.com/@3121534312" class="text-emerald-400"></a>
-              language, more about it <a href="https://www.youtube.com/watch?v=TRD3OrCJJ9o"
-                class="text-emerald-400">here</a>.
-            </p>
-          </article>
-
-          <article
-            class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
-            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-              <h3 class="text-xl font-bold flex items-center justify-center gap-2">
-                <a href="https://alt.alimad.co" class="text-emerald-400 hover:underline">My Website</a>
-                <a href="https://github.com/Alimadcorp/MyWebsite"
-                  class="inline-block text-xs font-medium text-neutral-400">
-                  &lt;/&gt;
-                </a>
-              </h3>
-              <span class=" text-xs text-neutral-500 text-center">June 19, 2025</span>
-            </div>
-            <p class="text-sm text-neutral-300 leading-relaxed">
-              My first peronal website, where I shared my coding stats, socials, status, even currently open
-              window name!
-            </p>
-          </article>
-        </div>
-      </main>
+      <div>
+       <span class="block text-neutral-500 text-xs mb-1">Time Today</span>
+       <span id="ht-today" class="font-medium text-neutral-200">--</span>
+      </div>
+      <div>
+       <span class="block text-neutral-500 text-xs mb-1">Streak</span>
+       <span class="font-medium text-neutral-200"><span id="ht-streak">--</span> Days</span>
+      </div>
+     </div>
     </div>
-  </div>
-  <footer class="text-neutral-500 text-xs md:text-sm bg-neutral-950 px-6 py-6">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-      <span class="flex flex-row gap-6 font-medium">
-        <a href="https://alt.alimad.co" class="transition-colors">Old Website</a>
-        <a href="https://youtube.com/@alimadco" class="transition-colors">Youtube</a>
-        <a href="https://github.com/Alimadcorp" class="transition-colors">Github</a>
-      </span>
-      <p class="flex items-center gap-2 text-neutral-400 font-medium">
-        Made by Muhammad Ali
-        <span class="bg-black px-2.5 py-1 border border-emerald-400 text-xs text-emerald-400"
-          title="Time for me right now" id="time"></span>
+
+    <div class="space-y-5 pt-5 border-t border-emerald-400">
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.co" class="text-emerald-400 hover:underline">Site</a>
+        <a href="https://github.com/Alimadcorp/Site" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">June 28, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Static remake of my old website, as it was taking too much CPU runtime credit on Vercel.
       </p>
+     </article>
+
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/worm" class="text-emerald-400 hover:underline">Worm</a>
+        <a href="https://github.com/F1nndegamer/Spin-to-win" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">June 26, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A game we (me, F1nn, Arman, two others) made for hackclub <a class="text-emerald-400"
+        href="https://jamegam.hackclub.com">jamegam</a>
+       and submitted to The Super Serious Juniper Dev Game Jam.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://count.alimad.co" class="text-emerald-400 hover:underline">CountMad</a>
+        <a href="https://github.com/Alimadcorp/Count" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">April 7, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       An basic online counter app based on the emerging SpacetimeDB.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://study.alimad.co" class="text-emerald-400 hover:underline">Alimad Study Archive</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">March 19, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       My first peronal website, where I shared my coding stats, socials, status, even currently open
+       window name!
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://falooda.alimad.co" class="text-emerald-400 hover:underline">Falooda Fanatics</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">March 8, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A website for the Falooda Fanatics, which is a club running under HackClub, in Faislabad.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://instagram.com/campfire.lahore" class="text-emerald-400 hover:underline">Campfire
+         Lahore</a>
+        <a href="https://github.com/Alimadcorp/campfire" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 28 - Mar 1, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A sattelite of <a class="text-emerald-400" href="https://campfire.hackclub.com">Hackclub Campfire</a>, an
+       in-person game jam hackathon that I and my college friends ran in Lahore, for two days, we were sponsored
+       by <a class="text-emerald-400" href="https://gamescollective.pk">The Games Collective</a>!
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://besideu.alimad.co" class="text-emerald-400 hover:underline">BesideU</a>
+        <a href="https://github.com/Alimadcorp/BesideU" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 1, 2026</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A failed attempt at making a revolutionary location aware social app for the students and travellers of
+       Pakistan. (Flutter rewrite coming soon)
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://http.alimad.co" class="text-emerald-400 hover:underline">RESTMad</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Dec 19, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A REST API request client because all the other ones out there are either too many ads or require an account, for
+       a very simple task
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://qr.alimad.co" class="text-emerald-400 hover:underline">QR</a>
+        <a href="https://github.com/Alimadcorp/qr" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Dec 15, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Very simple QR code generator
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://quantarax.alimad.co" class="text-emerald-400 hover:underline">QuantaraX</a>
+        <a href="https://github.com/Alimadcorp/quantarax" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Dec 14, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Website of a community researching on quantum mechanics
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://games.alimad.co" class="text-emerald-400 hover:underline">Singup</a>
+        <a href="https://github.com/Alimadcorp/HtmlGames" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Nov 24, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       One of the worst signup experiences every created. Submitted to <a class="text-emerald-400"
+        href="https://www.reddit.com/r/badUIbattles/comments/1p6xzil">r/BadUIBattles</a>, sponsored in a <a
+        class="text-emerald-400" href="https://www.youtube.com/watch?v=-ZHMpxN2jUg">Hyperplexed video</a>!
+      </p>
+     </article>
+
+     <!-- PROJECTS FROM LATE 2025 -->
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://chat.alimad.co" class="text-emerald-400 hover:underline">Chat</a>
+        <a href="https://github.com/Alimadcorp/chat"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Nov 15, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A channel based chatting app, no need for signup, all you and your recipient need is to know a common channel
+       name
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://life.alimad.co" class="text-emerald-400 hover:underline">Life</a>
+        <a href="https://github.com/Alimadcorp/life"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Nov 06, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Conway's Game of Life in 1 line of HTML!
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://itch.io/jam/banana-game-jam-3" class="text-emerald-400 hover:underline">Banana Game Jam 3</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Oct 15 - Oct 24, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Third iteration of the Banana Game Jam, hosted by me, on itch.io, this one had only two submissions :&lt; </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://312.alimad.co" class="text-emerald-400 hover:underline">312 Encoder</a>
+        <a href="https://github.com/Alimadcorp/312" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">October 12, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       An encoder/decoder for the <a href="https://youtube.com/@3121534312" class="text-emerald-400"></a>
+       language, more about it <a href="https://www.youtube.com/watch?v=TRD3OrCJJ9o" class="text-emerald-400">here</a>.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://server.alimad.co" class="text-emerald-400 hover:underline">Server</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Oct 02, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Uhhhh hides some secrets :3c
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://blog.alimad.co" class="text-emerald-400 hover:underline">Blog</a>
+        <a href="https://github.com/Alimadcorp/MyWebsite/tree/main/extras/blog"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Sep 21, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       My very first blog! Based on text files in the cdn, also supports AES 256 encryption!
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://emoji.alimad.co" class="text-emerald-400 hover:underline">Emoji</a>
+        <a href="https://github.com/Alimadcorp/emojiCdn"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Sep 20, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed flex gap-2">
+       All of Hackclub's emoji in one place, can be used to insert emoji almost instantly anywhere! <img
+        src="https://e.alimad.co/:yay" class="h-5">
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://up.alimad.co" class="text-emerald-400 hover:underline">Up</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Sep 11, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Public version of CDN, password and username is 123456
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://cdn.alimad.co" class="text-emerald-400 hover:underline">CDN</a>
+        <a href="https://github.com/Alimadcorp/MadDrive"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Sep 08, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A CDN based on Cloudflare R2 drive, and longcern's FlareDrive, I use this to share and store common files
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/gmtk25" class="text-emerald-400 hover:underline">#BORED</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 29, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed flex gap-2">
+       A game I, F1nn and Alpaca made together for the GMTK Game Jam 2025 <img src="https://e.alimad.co/:hehheh"
+        class="h-5">
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/reactmad" class="text-emerald-400 hover:underline">ReactMad</a>
+        <a href="https://github.com/Alimadcorp/reactmad"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 27, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A game I made for the Melon Jam 6
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://github.com/Alimadcorp/matrix" class="text-emerald-400 hover:underline">Matrix</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 22, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A matrix-like command interface that allows a basic set of commands along with a direct command control to a
+       child powershell process :3
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://wordle.alimad.co" class="text-emerald-400 hover:underline">Wordle</a>
+        <a href="https://github.com/Alimadcorp/MyWebsite/commits/main/extras/wordle"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 07, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Today's wordle answer, also the prediction and history of it
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://live.alimad.co" class="text-emerald-400 hover:underline">Live</a>
+        <a href="https://github.com/Alimadcorp/live"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 01, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       An app I made to count the amount of users currently online, also tracks visits and visitors by unique IP address
+       hash
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://somps.alimad.co" class="text-emerald-400 hover:underline">SOMPS</a>
+        <a href="https://github.com/Alimadcorp/SOMPS" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jun 26, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A failed attempt at making a revolutionary location aware social app for the students and travellers of
+       Pakistan. (Flutter rewrite coming soon)
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alt.alimad.co" class="text-emerald-400 hover:underline">My Website</a>
+        <a href="https://github.com/Alimadcorp/MyWebsite" class="inline-block text-xs font-medium text-neutral-400">
+         &lt;/&gt;
+        </a>
+       </h3>
+       <span class=" text-xs text-neutral-500 text-center">June 19, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       My first peronal website, where I shared my coding stats, socials, status, even currently open
+       window name!
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/gleambox" class="text-emerald-400 hover:underline">Gleambox</a>
+        <a href="https://github.com/Alimadcorp/gleambox"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jun 06, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A game I made for the UDC Game Jam #34, <a href="https://www.youtube.com/live/OMOf9z4kaLg?t=292"
+        class="text-emerald-400 hover:underline">watch Joe's review on it</a>
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://Alimadcorp.github.io/itchxport" class="text-emerald-400 hover:underline">itch.xport</a>
+        <a href="https://github.com/Alimadcorp/itchxport"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Mar 28, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Helps in exporting all of your itch games to a clean JSON file :hehheh:
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://replace.alimad.co" class="text-emerald-400 hover:underline">MegaReplace</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Mar 16, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Sequential and customizable replace operation performer, helpful for people who want to replace certain words in
+       a predefined sequence
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <p>Proxy</p>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Mar 16, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Proxies web requests for bypassing CORS
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://log.alimad.co" class="text-emerald-400 hover:underline">MadLog</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Mar 01, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Serverless channel based logger, backbone of all comment and logging services in the Alimad ecosystem of things
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://watch.alimad.co" class="text-emerald-400 hover:underline">StupidWatch</a>
+        <a href="https://github.com/Alimadcorp/stupidwatch"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 27, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Better than your average stopwatch, faster, accurate, and intuitive. Also available on the <a
+        href="https://play.google.com/store/apps/details?id=com.alimad.stupidwatch"
+        class="text-emerald-400 hover:underline">Google Play Store</a>
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://webtools.alimad.co" class="text-emerald-400 hover:underline">WebBuildTools</a>
+        <a href="https://github.com/Alimadcorp/WebBuildTools"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 24, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A package for Unity that improves the loading screen of, and allows adding multiple builds to, web exports
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://meme.alimad.co" class="text-emerald-400 hover:underline">Meme</a>
+        <a href="https://github.com/Alimadcorp/meme"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jan 17, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Meme of the day, fetches memes from Reddit
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/wmj24" class="text-emerald-400 hover:underline">Magnet Madness</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Dec 29, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       The first game I and F1nn made together for the Winter Melon Game Jam 2024, here is <a
+        href="https://www.youtube.com/live/b0GAQHfWZEA?t=160" class="text-emerald-400 hover:underline">Joe's
+        stream</a> on it, it is also available on the <a
+        href="https://play.google.com/store/apps/details?id=com.F1nndegamer.MagnetMadness"
+        class="text-emerald-400 hover:underline">Google Play Store</a>
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://theme.alimad.co" class="text-emerald-400 hover:underline">Theme</a>
+        <a href="https://github.com/Alimadcorp/themegen"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Dec 10, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Theme generator for game jam theme selections, combination of multiple other people's theme generators.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://sendup.alimad.co" class="text-emerald-400 hover:underline">Sendup</a>
+        <a href="https://github.com/Alimadcorp/sendup"
+         class="inline-block text-xs font-medium text-neutral-400">&lt;/&gt;</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Nov 24, 2024 & Nov 28, 2025</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A sendup schedule generator for my college friends. Makes easier to find your seating plan, instead of using the
+       good old read-through-the-40-page-pdf method
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/chromadicc" class="text-emerald-400 hover:underline">Chromadic</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Nov 07, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Casual submission to Fox Hollow Game Jam 3, here is Joe's <a
+        href="https://www.youtube.com/live/1_fFYoIv6Mg?si=DlO5VYCNOr3SgQwj&t=541"
+        class="text-emerald-400 hover:underline">review</a>, won the 75$ prize from this one.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/relevate" class="text-emerald-400 hover:underline">Relevate</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Oct 06, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Submission to the Interstellar Game Jam 7 on itch, here is the host, <a
+        href="https://www.youtube.com/live/A5ALZAKsrwg?t=953" class="text-emerald-400 hover:underline">Shadow's
+        review stream</a>
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://itch.io/jam/banana-game-jam-2" class="text-emerald-400 hover:underline">Banana Game Jam 2</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Aug 30 - Sep 07, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       The second iteration of the yearly Banana Game Jam, which Fox Hollow Games himself joined! Here's a <a
+        href="https://www.youtube.com/watch?v=8IngCQopNIk" class="text-emerald-400 hover:underline">video</a> of him
+       working on his game for the jam.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/gmtkmad-2024" class="text-emerald-400 hover:underline">ElectroMad 2024</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Aug 19, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       My solo submission for the GMTK Game Jam 2024, a game where you're stuck inside ur computer, and have to perform
+       actions at an atomic scale to escape the device, made in 4 days, here's a <a
+        href="https://www.youtube.com/live/V8njmsfv7B8?t=3647" class="text-emerald-400 hover:underline">review</a> of
+       it! Watch the <a href="https://www.youtube.com/watch?v=eUxXXlsx-Iw"
+        class="text-emerald-400 hover:underline">trailer</a> here.
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/madrix" class="text-emerald-400 hover:underline">Madrix</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 19, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       A game I made for the lame jam 41, which further on was expanded to make a windows CLI app, listed somehwere
+       above, here's the <a href="https://www.twitch.tv/videos/2204586719?t=01h10m10s"
+        class="text-emerald-400 hover:underline">host's review</a>
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/cellbit" class="text-emerald-400 hover:underline">Cellbit</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 14, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Link: <a href="https://www.youtube.com/live/2cS7x1z0Mus?t=1473" class="text-emerald-400 hover:underline">YouTube
+        Stream</a> <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/banana" class="text-emerald-400 hover:underline">Banana</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 09, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Link: <a href="https://www.youtube.com/live/5npUoM0S5DU?t=3141" class="text-emerald-400 hover:underline">YouTube
+        Stream</a> <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/zomboozle" class="text-emerald-400 hover:underline">Zomboozle</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jun 21, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Link: <a href="https://www.youtube.com/live/pGvXKpmeaZk?t=5099" class="text-emerald-400 hover:underline">YouTube
+        Stream</a> <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/zolitude" class="text-emerald-400 hover:underline">Zolitude</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jun 10, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       Link: <a href="https://www.youtube.com/live/9MyoxiItjK8?si=BFldWjgrQyRVybHb&t=18821"
+        class="text-emerald-400 hover:underline">YouTube Stream</a> <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/pencildash3d" class="text-emerald-400 hover:underline">Pencildash3d</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">May 27, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/clicker" class="text-emerald-400 hover:underline">Clicker</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Apr 16, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/madarea" class="text-emerald-400 hover:underline">Madarea</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Mar 29, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/shootmad" class="text-emerald-400 hover:underline">Shootmad</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Mar 25, 2024</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/madrun" class="text-emerald-400 hover:underline">Madrun</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Sep 26, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://itch.io/jam/alimad-banana-jam" class="text-emerald-400 hover:underline">Alimad Banana Jam</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 25 - Aug 04, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/theminions" class="text-emerald-400 hover:underline">Theminions</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Aug 03, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/laser-kings" class="text-emerald-400 hover:underline">Laser Kings</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 30, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/geometry-dash-sky" class="text-emerald-400 hover:underline">Geometry Dash
+         Sky</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 19, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/buggle" class="text-emerald-400 hover:underline">Buggle</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 14, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/polk" class="text-emerald-400 hover:underline">Polk</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jul 11, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/jumpbump" class="text-emerald-400 hover:underline">Jumpbump</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jun 29, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/sugarmad" class="text-emerald-400 hover:underline">Sugarmad</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 23, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/level-1" class="text-emerald-400 hover:underline">Level 1</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 13, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/ballmad" class="text-emerald-400 hover:underline">Ballmad</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Feb 12, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/swiveling-escape" class="text-emerald-400 hover:underline">Swiveling Escape</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jan 28, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/click-challenge" class="text-emerald-400 hover:underline">Click Challenge</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jan 05, 2023</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
+
+     <article class="flex flex-col gap-3 p-4 border border-neutral-800 hover:border-emerald-400/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+       <h3 class="text-xl font-bold flex items-center justify-center gap-2">
+        <a href="https://alimad.itch.io/makeways" class="text-emerald-400 hover:underline">Makeways</a>
+       </h3>
+       <span class="text-xs text-neutral-500 text-center">Jun 30, 2022</span>
+      </div>
+      <p class="text-sm text-neutral-300 leading-relaxed">
+       <!-- Write your description here -->
+      </p>
+     </article>
     </div>
-  </footer>
+   </main>
+  </div>
+ </div>
+ <footer class="text-neutral-500 text-xs md:text-sm bg-neutral-950 px-6 py-6">
+  <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+   <span class="flex flex-row gap-6 font-medium">
+    <a href="https://alt.alimad.co" class="transition-colors">Old Website</a>
+    <a href="https://youtube.com/@alimadco" class="transition-colors">Youtube</a>
+    <a href="https://github.com/Alimadcorp" class="transition-colors">Github</a>
+   </span>
+   <p class="flex items-center gap-2 text-neutral-400 font-medium">
+    Made by Muhammad Ali
+    <span class="bg-black px-2.5 py-1 border border-emerald-400 text-xs text-emerald-400" title="Time for me right now"
+     id="time"></span>
+   </p>
+  </div>
+ </footer>
 </body>
 
 </html>

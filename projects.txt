@@ -32,46 +32,45 @@ TYP	NAME				DATE			NOTES
 1	zomboozle			Jun 21, 2024	https://www.youtube.com/live/pGvXKpmeaZk?t=5099
 1	banana				Jul 09, 2024	https://www.youtube.com/live/5npUoM0S5DU?t=3141
 1	cellbit				Jul 14, 2024	https://www.youtube.com/live/2cS7x1z0Mus?t=1473
-1	madrix				Jul 19, 2024	https://www.twitch.tv/videos/2204586719?t=01h10m10s
-1	gmtkmad-2024		Aug 19, 2024	https://www.youtube.com/live/V8njmsfv7B8?t=3647
-3	banana-game-jam-2	Aug 30, 2024	https://www.youtube.com/watch?v=8IngCQopNIk
+1	madrix				Jul 19, 2024	D https://www.twitch.tv/videos/2204586719?t=01h10m10s
+1	gmtkmad-2024		Aug 19, 2024	D https://www.youtube.com/live/V8njmsfv7B8?t=3647
+3	banana-game-jam-2	Aug 30, 2024	D https://www.youtube.com/watch?v=8IngCQopNIk
 						Sep 07, 2024
-1	relevate			Oct 06, 2024	https://www.youtube.com/live/A5ALZAKsrwg?t=953
-1	chromadicc			Nov 07, 2024	https://www.youtube.com/live/1_fFYoIv6Mg?si=DlO5VYCNOr3SgQwj&t=541
-2+4	sendup				Nov 24, 2024	Nov 28, 2025
-2+4	theme				Dec 10, 2024
-1	wmj24				Dec 29, 2024	https://www.youtube.com/live/b0GAQHfWZEA?t=160
+1	relevate			Oct 06, 2024	D https://www.youtube.com/live/A5ALZAKsrwg?t=953
+1	chromadicc			Nov 07, 2024	D https://www.youtube.com/live/1_fFYoIv6Mg?si=DlO5VYCNOr3SgQwj&t=541
+2+4	sendup				Nov 24, 2024	D Nov 28, 2025
+2+4	theme				Dec 10, 2024	D
+1	wmj24				Dec 29, 2024	D https://www.youtube.com/live/b0GAQHfWZEA?t=160
 
-2+4 meme				Jan 17, 2025
-2+4	webtools			Feb 24, 2025	WebBuildTools
-2+4	watch				Feb 27, 2025	stupidwatch https://play.google.com/store/apps/details?id=com.alimad.stupidwatch
-2	log					Mar 01, 2025
-2	proxy				Mar 16, 2025
-2	replace				Mar 16, 2025
-2+4	itch.xport			Mar 28, 2025
-1+4	gleambox			Jun 06, 2025	https://www.youtube.com/live/OMOf9z4kaLg?t=292
+2+4 meme				Jan 17, 2025	D
+2+4	webtools			Feb 24, 2025	D WebBuildTools
+2+4	watch				Feb 27, 2025	D stupidwatch https://play.google.com/store/apps/details?id=com.alimad.stupidwatch
+2	log					Mar 01, 2025	D
+2	proxy				Mar 16, 2025	D
+2	replace				Mar 16, 2025	D
+2+4	itch.xport			Mar 28, 2025	D
+1+4	gleambox			Jun 06, 2025	D https://www.youtube.com/live/OMOf9z4kaLg?t=292
 2+4	alt					Jun 19, 2025	D MyWebsite
-2+4	somps				Jun 28, 2025
-2+4	live				Jul 01, 2025
-2+4	wordle				Jul 07, 2025	MyWebsite/commits/main/extras/wordle
-4	matrix				Jul 22, 2025
-1+4	react				Jul 27, 2025	reactmad
-1	gmtk25				Jul 29, 2025
-2+4	cdn					Sep 08, 2025	MadDrive
-2	up					Sep 11, 2025
-2+4	emoji				Sep 20, 2025	emojiCdn
-2+4	Blog				Sep 21, 2025	MyWebsite/tree/main/extras/blog
-2	server				Oct 02, 2025
+2+4	somps				Jun 26, 2025	D
+2+4	live				Jul 01, 2025	D
+2+4	wordle				Jul 07, 2025	D MyWebsite/commits/main/extras/wordle
+4	matrix				Jul 22, 2025	D
+1+4	react				Jul 27, 2025	D reactmad
+1	gmtk25				Jul 29, 2025	D
+2+4	cdn					Sep 08, 2025	D MadDrive
+2	up					Sep 11, 2025	D
+2+4	emoji				Sep 20, 2025	D emojiCdn
+2+4	Blog				Sep 21, 2025	D MyWebsite/tree/main/extras/blog
+2	server				Oct 02, 2025	D
 2+4	312					Oct 12, 2025	D
-3	banana-game-jam-3	Oct 15, 2025
-						Oct 24, 2025
-2+4	life				Nov 06, 2025
-2+4	chat				Nov 15, 2025
-2+4	Games				Nov 24, 2025	(HtmlGames) https://www.reddit.com/r/badUIbattles/comments/1p6xzil
-2+4	somps				Dec 10, 2025
-2+4	quantarax			Dec 14, 2025
-2+4	qr					Dec 15, 2025
-2	http				Dec 19, 2025
+3	banana-game-jam-3	Oct 15, 2025	D
+						Oct 24, 2025	D
+2+4	life				Nov 06, 2025	D
+2+4	chat				Nov 15, 2025	D
+2+4	Games				Nov 24, 2025	D (HtmlGames) https://www.reddit.com/r/badUIbattles/comments/1p6xzil
+2+4	quantarax			Dec 14, 2025	D
+2+4	qr					Dec 15, 2025	D
+2	http				Dec 19, 2025	D
 
 2+4	BesideU				Feb 01, 2026	D
 2+4	campfire			Feb 28, 2026	D
@@ -80,5 +79,3 @@ TYP	NAME				DATE			NOTES
 2+4	Count				Apr 07, 2026	D
 1+4	worm				Jun 26, 2026	D F1nndegamer/Spin-to-win
 2+4	Site				Jun 28, 2026	D
-
-<a class="text-emerald-400" href="https://"></a>
