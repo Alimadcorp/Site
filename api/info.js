@@ -73,10 +73,13 @@ export async function getInfo() {
         const today2 = date(new Date(), 1);
         const tomorrow2 = date((new Date).setDate((new Date()).getDate() + 1), 1);
 
-        const r = await fetch(`https://hackatime.hackclub.com/api/v1/users/${HAKATIME}/stats?start_date=${today}&end_date=${tomorrow}`);
+        const u1 = `https://hackatime.hackclub.com/api/v1/users/${HAKATIME}/stats?start_date=${today}&end_date=${tomorrow}`;
+        const u2 = `https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=${HAKATIME}`;
+
+        const r = await fetch(u1);
         const d = await r.json();
 
-        const t = await fetch(`https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=${HAKATIME}`)
+        const t = await fetch()
         const p = await t.json();
 
         console.log(d, p);
