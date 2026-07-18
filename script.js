@@ -208,17 +208,18 @@ async function onGithub(data) {
 function onHackatime(data) {
   const htContainer = $("hackatime-container");
   if (!htContainer) return;
+  let hours, minutes;
   if (data.project && data.project.key) {
     $("ht-project").textContent = data.project.key;
-    const hours = Math.floor(data.project.total / 3600);
-    const minutes = Math.floor((data.project.total % 3600) / 60);
+    hours = Math.floor(data.project.total / 3600);
+    minutes = Math.floor((data.project.total % 3600) / 60);
     $("ht-total").textContent = `(${hours}h ${minutes}m)`;
   } else {
     $("ht-project").textContent = "No active projects right now";
     $("ht-total").textContent = "";
   }
-  if (data.time_today.startsWith("Start")) data.time_today = "0h 0m";
-  $("ht-today").textContent = data.time_today || "0h 0m";
+  if (data.time_today.startsWith("Start")) data.time_today = `(${hours}h ${minutes}m)`;
+  $("ht-today").textContent = data.time_today;
   $("ht-streak").textContent = data.streak || 0;
   htContainer.classList.toggle("hidden", false);
 }
