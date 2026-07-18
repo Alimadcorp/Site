@@ -218,7 +218,7 @@ function onHackatime(data) {
     $("ht-project").textContent = "No active projects right now";
     $("ht-total").textContent = "";
   }
-  if (data.time_today.startsWith("Start") || data.time_today == "0h 0m") data.time_today = `(${hours}h ${minutes}m)`;
+  if (data.time_today?.startsWith("Start") || data.time_today == "0h 0m" || data.time_today?.trim() === "") data.time_today = `(${hours}h ${minutes}m)`;
   $("ht-today").textContent = data.time_today;
   $("ht-streak").textContent = data.streak || 0;
   htContainer.classList.toggle("hidden", false);
