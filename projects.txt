@@ -7,31 +7,31 @@ TYP={	1: alimad.itch.io/NAME,
 	}
 
 TYP	NAME				DATE			NOTES
-1	makeways			Jun 30, 2022
+1	makeways			Jun 30, 2022	D
 
-1	click-challenge		Jan 05, 2023
-1	swiveling-escape	Jan 28, 2023
-1	ballmad				Feb 12, 2023
-1	level-1				Feb 13, 2023
-1	sugarmad			Feb 23, 2023
-1	jumpbump			Jun 29, 2023
-1	polk				Jul 11, 2023
-1	buggle				Jul 14, 2023
-1	geometry-dash-sky	Jul 19, 2023
-1	laser-kings			Jul 30, 2023
-1	theminions			Aug 03, 2023
-3	alimad-banana-jam	Jul 25, 2023
-						Aug 04, 2023
-1	madrun				Sep 26, 2023
+1	click-challenge		Jan 05, 2023	D
+1	swiveling-escape	Jan 28, 2023	D
+1	ballmad				Feb 12, 2023	D
+1	level-1				Feb 13, 2023	D
+1	sugarmad			Feb 23, 2023	D
+1	jumpbump			Jun 29, 2023	D
+1	polk				Jul 11, 2023	D
+1	buggle				Jul 14, 2023	D
+1	geometry-dash-sky	Jul 19, 2023	D
+1	laser-kings			Jul 30, 2023	D
+1	theminions			Aug 03, 2023	D
+3	alimad-banana-jam	Jul 25, 2023	D
+						Aug 04, 2023	D
+1	madrun				Sep 26, 2023	D
 
-1	shootmad			Mar 25, 2024
-1	madarea				Mar 29, 2024
-1	clicker				Apr 16, 2024
-1	pencildash3d		May 27, 2024
-1	zolitude			Jun 10, 2024	https://www.youtube.com/live/9MyoxiItjK8?si=BFldWjgrQyRVybHb&t=18821
-1	zomboozle			Jun 21, 2024	https://www.youtube.com/live/pGvXKpmeaZk?t=5099
-1	banana				Jul 09, 2024	https://www.youtube.com/live/5npUoM0S5DU?t=3141
-1	cellbit				Jul 14, 2024	https://www.youtube.com/live/2cS7x1z0Mus?t=1473
+1	shootmad			Mar 25, 2024	D
+1	madarea				Mar 29, 2024	D
+1	clicker				Apr 16, 2024	D
+1	pencildash3d		May 27, 2024	D
+1	zolitude			Jun 10, 2024	D https://www.youtube.com/live/9MyoxiItjK8?si=BFldWjgrQyRVybHb&t=18821
+1	zomboozle			Jun 21, 2024	D https://www.youtube.com/live/pGvXKpmeaZk?t=5099
+1	banana				Jul 09, 2024	D https://www.youtube.com/live/5npUoM0S5DU?t=3141
+1	cellbit				Jul 14, 2024	D https://www.youtube.com/live/2cS7x1z0Mus?t=1473
 1	madrix				Jul 19, 2024	D https://www.twitch.tv/videos/2204586719?t=01h10m10s
 1	gmtkmad-2024		Aug 19, 2024	D https://www.youtube.com/live/V8njmsfv7B8?t=3647
 3	banana-game-jam-2	Aug 30, 2024	D https://www.youtube.com/watch?v=8IngCQopNIk
