@@ -5,6 +5,7 @@
 import express from "express";
 import cors from "cors";
 import { getInfo } from "./info.js";
+import { hs } from "./scr.js";
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,11 @@ app.get("/", (req, res) => {
 
 app.get("/info", async (req, res) => {
     res.json(await getInfo());
+});
+
+app.get("/script.js", async (req, res) => {
+    res.type("js");
+    res.send(hs);
 });
 
 app.listen(port, () => {
