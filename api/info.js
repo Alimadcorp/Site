@@ -79,7 +79,7 @@ export async function getInfo() {
         const r = await fetch(u1);
         const d = await r.json();
 
-        const t = await fetch()
+        const t = await fetch(u2)
         const p = await t.json();
 
         console.log(u1, d, u2, p);
