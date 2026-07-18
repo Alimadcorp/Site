@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+Disallow: /*.*
+Allow: /*.html$
+Allow: /$
 
 Sitemap: https://alimad.co/sitemap.xml
