@@ -67,7 +67,8 @@ const subscribe = async (text) => {
   await fetch(`https://log.alimad.co/api/log?channel=subscribe:${commentApp}&text=${text}`);
   $("s-input").disabled = $("s-subscribe").disabled = false;
   $("s-input").value = "";
-  $("subb").innerHTML = "We've added you to the newsletter, thanks for subscribing! Here's a heart <3"
+  $("subb").innerHTML = "We've added you to the newsletter, thanks for subscribing! Here's a heart <3";
+  $("s-div").style.display = "none";
 };
 
 const postComment = async (text) => {
