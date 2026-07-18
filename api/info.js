@@ -79,6 +79,8 @@ export async function getInfo() {
         const t = await fetch(`https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=${HAKATIME}`)
         const p = await t.json();
 
+        console.log(d, p);
+
         let lp = { key: "", total: 0 };
         for (let pr of p.projects) {
             if (lp.total < pr.total) {
