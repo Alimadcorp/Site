@@ -63,23 +63,28 @@ export async function getInfo() {
                 year: 'numeric'
             });
             const parts = formatter.formatToParts(i);
+            console.log(parts)
             const dd = parts.find(p => p.type === 'day').value;
             const mm = parts.find(p => p.type === 'month').value;
             const yyyy = parts.find(p => p.type === 'year').value;
-            return u == 1 ? `${yyyy}-${mm}-${dd}` : `${dd}-${mm}-${yyyy}`;
+            return u == 1 ? encodeURIComponent(`${yyyy}-${mm}-${dd}T00:00:00+0500`) : `${dd}-${mm}-${yyyy}`;
         }
         const today = date(new Date());
         const tomorrow = date((new Date).setDate((new Date()).getDate() + 1));
         const today2 = date(new Date(), 1);
         const tomorrow2 = date((new Date).setDate((new Date()).getDate() + 1), 1);
+        const headers = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+            "Cookie": process.env.HC_COOKIE || ""
+        };
 
         const u1 = `https://hackatime.hackclub.com/api/v1/users/${HAKATIME}/stats?start_date=${today}&end_date=${tomorrow}`;
-        const u2 = `https://hackatime.hackclub.com/api/summary?start=${today2}&end=${tomorrow2}&user_id=${HAKATIME}`;
+        const u2 = `https://hackatime.hackclub.com/api/summary?from=${today2}&to=${tomorrow2}&user_id=${HAKATIME}`;
 
-        const r = await fetch(u1);
+        const r = await fetch(u1, { headers });
         const d = await r.json();
 
-        const t = await fetch(u2)
+        const t = await fetch(u2, { headers });
         const p = await t.json();
 
         console.log(u1, d, u2, p);
