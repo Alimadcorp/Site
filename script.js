@@ -39,26 +39,32 @@ const loadComments = (page = "alimadhomepage") => {
 
 const setupComments = (page) => {
   $("c-input").addEventListener("keydown", (e) => {
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
-    postComment($("c-input").value);
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      postComment($("c-input").value);
+    }
   });
 
   $("c-post").addEventListener("click", () => {
     postComment($("c-input").value);
   });
+
+  setInterval(() => $("c-post").disabled = !$("c-input").value.trim(), 500);
 }
 
 const setupSubs = (page) => {
   $("s-input").addEventListener("keydown", (e) => {
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
-    subscribe($("s-input").value);
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      subscribe($("s-input").value);
+    }
   });
 
   $("s-subscribe").addEventListener("click", () => {
     subscribe($("s-input").value);
   });
+
+  setInterval(() => $("s-subscribe").disabled = !$("s-input").value.trim(), 500);
 }
 
 const subscribe = async (text) => {
