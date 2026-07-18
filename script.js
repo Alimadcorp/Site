@@ -83,7 +83,7 @@ async function onloaded() { // only called when on main page
   prod = !(/^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|\[::1\])$/.test(window.location.hostname) || window.location.protocol === 'file:');
   // (got this snippet from a random ahh website)
 
-  fetch(prod ? "https://api.alimad.co/info" : "http://localhost:5501").then(r => r.json()).then(d => onGithub(d));
+  fetch(prod ? "https://api.alimad.co/info" : "http://localhost:5501/info").then(r => r.json()).then(d => onGithub(d));
   setupLive("alimad.co");
   loadComments();
   setupComments();
