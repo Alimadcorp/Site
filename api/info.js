@@ -82,7 +82,7 @@ export async function getInfo() {
         const t = await fetch()
         const p = await t.json();
 
-        console.log(d, p);
+        console.log(u1, d, u2, p);
 
         let lp = { key: "", total: 0 };
         for (let pr of p.projects) {
