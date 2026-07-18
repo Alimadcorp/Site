@@ -5,7 +5,7 @@ const path = require('path');
 
 const domain = 'https://alimad.co';
 
-const exclude = "api,CNAME,history.txt,README.md,robots.txt,script.js,sitemap.js,sitemap.xml,meow.js,style.css,todo.txt,generateOG.js,package.json,node_modules,package-lock.json,example-blog.html".split(",");
+const exclude = "api,CNAME,history.txt,README.md,robots.txt,script.js,generate.js,sitemap.js,sitemap.xml,meow.js,style.css,todo.txt,generateOG.js,package.json,node_modules,package-lock.json,example-blog.html,projects.txt".split(",");
 
 let urls = [];
 
@@ -45,7 +45,7 @@ function generate(dadd) {
                 lastmod: fileModDate
             });
         } else {
-            generate("\\" + f);
+            generate("/" + f);
         }
     });
 }
