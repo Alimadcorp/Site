@@ -49,6 +49,27 @@ const setupComments = (page) => {
   });
 }
 
+const setupSubs = (page) => {
+  $("s-input").addEventListener("keydown", (e) => {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    subscribe($("s-input").value);
+  });
+
+  $("s-subscribe").addEventListener("click", () => {
+    subscribe($("s-input").value);
+  });
+}
+
+const subscribe = async (text) => {
+  if (text == "" || typeof text != "string") return;
+  $("s-input").disabled = $("s-subscribe").disabled = true;
+  await fetch(`https://log.alimad.co/api/log?channel=subscribe:${commentApp}&text=${text}`);
+  $("s-input").disabled = $("s-subscribe").disabled = false;
+  $("s-input").value = "";
+  $("subb").innerHTML = "We've added you to the newsletter, thanks for subscribing! Here's a heart <3"
+};
+
 const postComment = async (text) => {
   if (text == "" || typeof text != "string") return;
   $("c-input").disabled = $("c-post").disabled = true;
@@ -87,6 +108,7 @@ async function onloaded() { // only called when on main page
   setupLive("alimad.co");
   loadComments();
   setupComments();
+  setupSubs();
 }
 
 // make sure that if a user rapidly refreshes the page, do not log visits, this reduces inflation of visits
