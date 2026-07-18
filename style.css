@@ -30,10 +30,19 @@ body {
 }
 
 nav {
-    transform: translateY(0px);
+    transform: translateY(1px);
     /* the nav has a bottom border, the rest of content has a top border, merge these borders
     instead of removing the bottom border of the nav, so that when the page transition slides,
     the elements appear as boxes, and borders appear properly ! */
+}
+
+@media (min-width: 768px) {
+    nav {
+        transform: translateY(0px);
+        /* the nav has a bottom border, the rest of content has a top border, merge these borders
+    instead of removing the bottom border of the nav, so that when the page transition slides,
+    the elements appear as boxes, and borders appear properly ! */
+    }
 }
 
 a:hover {

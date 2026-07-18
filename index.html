@@ -103,6 +103,7 @@
             <p>In Scope:</p>
             <p>alimad.co</p>
             <p>*.alimad.co</p>
+            <p class="text-xs text-neutral-200">Only include those that are listed in the projects list</p>
           </div>
           <p id="time-left">Ends in 7 days</p>
           <div class="pt-2">
@@ -111,6 +112,14 @@
               Submit Your Key
             </a>
           </div>
+          <p class="text-xs text-neutral-200 hover:cursor-pointer"
+            onclick="document.getElementById('hint').classList.toggle('hidden', false)">Click to get one hint
+          </p>
+          <p class="hidden text-sm" id="hint">Look for odd things, try clicking randomly on elements, some are
+            interactable. The
+            first and last part of the key are on this main website. Each key except the last gives a lead to the next
+            key.
+          </p>
         </div>
       </section>
       <section class="grid grid-cols-1 md:grid-cols-2">
@@ -173,7 +182,8 @@
                 <p class=" text-xs text-neutral-500 font-semibold">Commits</p>
                 <span id="total_commits" class="font-bold text-neutral-500">1.1k</span>
               </div>
-              <div class="bg-black p-2.5 border border-emerald-400">
+              <div class="bg-black p-2.5 border border-emerald-400"
+                onclick="alert('8: wwEmdJk1av39Vxnj9MKxAqGNqocmLG/5SYsrlRQxS18=');alert('you need a key to decrypt this message.');alert('devglan.com/online-tools/text-encryption-decryption')">
                 <p class=" text-xs text-neutral-500 font-semibold">PRs</p>
                 <span id="total_prs" class="font-bold text-neutral-500">26</span>
               </div>

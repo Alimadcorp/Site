@@ -47,19 +47,19 @@
 </head>
 
 <body class='p-0 bg-black text-neutral-200 antialiased font-sans selection:bg-green-400 selection:text-black'>
-  <div class="max-w-4xl mx-auto px-3 py-3 md:py-12 space-y-0" id="daddy">
-    <nav class="border border-emerald-400 text-neutral-400 p-3">
+  <div class="max-w-4xl mx-auto md:p-3 md:py-12 space-y-0" id="daddy">
+    <nav class="border-b md:border border-emerald-400 text-neutral-400 p-3">
       <div class="flex flex-wrap items-center gap-3 text-sm font-medium">
         <a href="/" class="transition-colors">Home</a>
         <a href="/about" class="transition-colors">About</a>
         <a href="/projects" class="transition-colors">Projects</a>
         <a href="/blog" class="transition-colors">Blog</a>
-        <a class="transition-colors" href="/resume">Résumé</a>
+        <a class="transition-colors hidden md:inline" href="/resume">Résumé</a>
         <a href="/contact" class="text-white font-semibold transition-colors">Contact</a>
       </div>
     </nav>
     <div id="content" class="p-0 m-0">
-      <section class="bg-transparent border border-emerald-400 border-b-0 p-6 md:p-8 space-y-4">
+      <section class="bg-transparent md:border border-emerald-400 border-b-0 p-4 md:p-8 space-y-4">
         <div class="flex items-center gap-3 justify-center md:justify-start">
           <h1 class="text-2xl md:text-5xl font-bold text-emerald-500">Contact me</h1>
           <img src="https://e.alimad.co/:thinkies" class="w-10 h-10 object-contain" alt=":thinkies:">
@@ -68,7 +68,7 @@
           plus some of my socials too</p>
       </section>
       <main class="grid grid-cols-1 md:grid-cols-2">
-        <div class="bg-transparent border border-emerald-400 p-5 space-y-4">
+        <div class="bg-transparent border-t md:border border-emerald-400 p-5 space-y-4">
           <div>
             <div class="text-white grid gap-2 p-3 border border-emerald-400 text-center">
               <div class="grid">
@@ -103,7 +103,8 @@
           </div>
         </div>
 
-        <div class="bg-transparent border border-emerald-400 md:border-l-0 border-t-0 md:border-t p-5 space-y-4">
+        <div
+          class="bg-transparent border-t md:border border-emerald-400 md:border-l-0 border-t-0 md:border-t p-5 space-y-4">
           <div>
             <div class="text-neutral-400 grid gap-2 p-3 text-lg border border-emerald-400 text-center">
               <div class="grid">
