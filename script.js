@@ -147,6 +147,9 @@ async function onLive(data) {
   // format: string number || { totalPings, uniqueIds, onlineCount, lastPing }
   if (typeof data == "object") {
     for (let key of ["totalPings", "uniqueIds", "onlineCount"]) {
+      if (parseInt(data[key]) < parseInt(localStorage.getItem("live.alimad.co:last:" + liveApp + key))) {
+        data[key] = localStorage.getItem("live.alimad.co:last:" + liveApp + key);
+      }
       $(key).textContent = data[key];
       // use toggle true instead of add to avoid dupes
       $(key).classList.toggle("text-white", true);
