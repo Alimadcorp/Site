@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
 
+// mostly code imported from the blog.alimad.co source
+
 const blogDir = path.join(__dirname, 'blog');
 const base = 'https://alimad.co/blog';
 const favicon = 'https://blog.alimad.co/favicon.ico';
