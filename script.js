@@ -232,7 +232,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (path == "/") {
     onloaded();
-    setInterval(() => $("time-left").textContent = `Ends ${timeago.format(new Date("2026-07-25T17:00:00Z"))}`, 1000);
+    const end = "2026-07-25T17:00:00Z";
+    setInterval(() => $("time-left").textContent = `End${(new Date() - new Date(end)) > 0 ? "ed" : "s"} ${timeago.format(new Date(end))}`, 1000);
   } else {
     if (path.startsWith("/projects")) {
       const cProject = () => fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onHackatime(d.hackatime));
