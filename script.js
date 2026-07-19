@@ -153,10 +153,13 @@ async function onLive(data) {
       const diff = processLocalCount(key, data[key]);
       if (diff > 0) {
         $("d" + key).textContent = `(+${diff})`;
+      } else {
+        $(key).textContent = localStorage.getItem("live.alimad.co:last:" + liveApp + key);
+        // if the amt has decreased to one, use the locally stored count to avoid showing a 1 or 0
       }
     }
   } else if (typeof data == "string") {
-    $("onlineCount").textContent = data;
+    $("onlineCount").textContent = data !== "0" ? data : "1";
     $("onlineCount").classList.toggle("text-white", true);
   }
 }
