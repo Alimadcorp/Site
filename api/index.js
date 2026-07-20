@@ -4,6 +4,7 @@
 
 import express from "express";
 import cors from "cors";
+import axios from "axios";
 import { getInfo } from "./info.js";
 import { hs } from "./scr.js";
 import dotenv from "dotenv";
