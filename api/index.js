@@ -63,7 +63,7 @@ app.get('/auth/hackatime/callback', async (req, res) => {
             headers: { Authorization: `Bearer ${access_token}` }
         });
 
-        const username = userResponse.data?.id; //  yup we got the username
+        const username = userResponse.data?.github_username; //  yup we got the username
         return res.redirect(`${hackabeat_url}/#access_token=${access_token}&username=${username}&key=${k}`);
     } catch (error) {
         console.error('OAuth Exchange Failed:', error.response?.data || error.message);
