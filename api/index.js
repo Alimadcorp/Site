@@ -9,6 +9,8 @@ import { getInfo } from "./info.js";
 import { hs } from "./scr.js";
 import dotenv from "dotenv";
 
+// hehe
+
 if (process.env.NODE_ENV !== "production") {
     dotenv.config({ path: ".env.local" });
 }
@@ -50,11 +52,11 @@ app.get('/auth/hackatime/callback', async (req, res) => {
 
         const { access_token } = response.data;
 
-        const userResponse = await axios.get('https://hackatime.hackclub.com/api/v1/users/current', {
+        const userResponse = await axios.get('https://hackatime.hackclub.com/api/v1/authenticated/me', {
             headers: { Authorization: `Bearer ${access_token}` }
         });
 
-        const username = userResponse.data?.data?.username;
+        const username = userResponse.data?.id; //  yup we got the username
         return res.redirect(`${hackabeat_url}/#access_token=${access_token}&username=${username}`);
     } catch (error) {
         console.error('OAuth Exchange Failed:', error.response?.data || error.message);
