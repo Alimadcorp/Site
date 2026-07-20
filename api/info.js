@@ -1,11 +1,6 @@
 // this script runs /github/info
 // get basic github stats and send them over
 import * as cheerio from "cheerio";
-import dotenv from "dotenv";
-
-if (process.env.NODE_ENV !== "production") {
-    dotenv.config({ path: ".env.local" });
-}
 
 const GITHUB_TOKEN = process.env.GH_TOKEN;
 const GITHUB = process.env.GITHUB_USNM;
