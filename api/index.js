@@ -52,19 +52,12 @@ app.get('/auth/hackatime/callback', async (req, res) => {
 
         const { access_token } = response.data;
 
-        const apiKeyRes = await fetch('https://hackatime.hackclub.com/api/v1/authenticated/api_keys', {
-            headers: { 'Authorization': `Bearer ${access_token}` }
-        });
-
-        if (!apiKeyRes.ok) throw new Error('Failed to retrieve operational api keys');
-        const k = (await apiKeyRes.json()).token;
-
         const userResponse = await axios.get('https://hackatime.hackclub.com/api/v1/authenticated/me', {
             headers: { Authorization: `Bearer ${access_token}` }
         });
 
         const username = userResponse.data?.github_username; //  yup we got the username
-        return res.redirect(`${hackabeat_url}/#access_token=${access_token}&username=${username}&uid=${userResponse.data?.id}&key=${k}`);
+        return res.redirect(`${hackabeat_url}/#access_token=${access_token}&username=${username}&uid=${userResponse.data?.id}`);
     } catch (error) {
         console.error('OAuth Exchange Failed:', error.response?.data || error.message);
         return res.status(500).send('Authentication routine failed.');
