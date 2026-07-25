@@ -236,7 +236,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (path == "/") {
     onloaded();
     const end = "2026-07-25T17:00:00Z";
-    setInterval(() => $("time-left").textContent = `End${(new Date() - new Date(end)) > 0 ? "ed" : "s"} ${timeago.format(new Date(end))}`, 1000);
+    setInterval(() => {
+      $("time-left").textContent = `End${(new Date() - new Date(end)) > 0 ? "ed" : "s"} ${timeago.format(new Date(end))}`;
+      if (new Date() - new Date(end) > 0) {
+        $("winner").style.display = 'inline';
+        for (let x of ['1', '2', '3']) {
+          $("gv-rm" + x).style.display = 'none';
+        }
+      }
+    }, 1000);
+
   } else {
     if (path.startsWith("/projects")) {
       const cProject = () => fetch("https://api.alimad.co/info").then(r => r.json()).then(d => onHackatime(d.hackatime));

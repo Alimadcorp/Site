@@ -75,14 +75,12 @@
           *OWN* projects! This is one of those projects, lol</p>
       </main>
       <section
-        class="relative p-8 bg-gradient-to-br from-emerald-600 to-teal-800 text-white shadow-xl shadow-emerald-950/20 md:border md:border-b-0 border-emerald-400 overflow-hidden flex flex-col md:flex-row gap-6 items-center"
+        class="relative p-8 border border-x-0 md:border-x md:border-y-0 border-emerald-400 overflow-hidden flex flex-col md:flex-row gap-6 items-center"
         id="mc-div">
         <div class="absolute -right-10 -top-10 w-40 h-40 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none">
         </div>
         <div class="relative shrink-0 order-1 md:order-2">
-          <div class="absolute inset-0 bg-emerald-400/20 rounded-xl blur-xl scale-95"></div>
-          <img src="https://e.alimad.co/mc_fox_spin" alt=":mc_fox_spin:"
-            class="h-28 md:h-32 object-contain relative drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform duration-300">
+          <img src="https://e.alimad.co/mc_fox_spin" alt=":mc_fox_spin:" class="h-28 md:h-32 object-contain relative">
         </div>
         <div class="space-y-4 flex-1 order-2 md:order-1 text-center md:text-left z-10">
           <h2
@@ -99,20 +97,22 @@
             submit multiple times. If in 7 days, no one finds the right key, the account will be given to a random
             person who submitted.
           </p>
-          <div>
+          <div id="gv-rm1">
             <p>In Scope:</p>
             <p>alimad.co</p>
             <p>*.alimad.co</p>
             <p class="text-xs text-neutral-200">Only include those that are listed in the projects list</p>
           </div>
           <p id="time-left">Ends in 7 days</p>
-          <div class="pt-2">
+          <p id="winner">Winner: <a class="text-emerald-400" href="https://instagram.com/hasaan.khilji">Hasaan
+              Khilji</a></p>
+          <div class="pt-2" id="gv-rm2">
             <a id="mc-link" href="https://alimad.fillout.com/mc-giveaway-june" target="_blank"
               class="inline-flex items-center justify-center px-6 py-3 font-bold text-emerald-950 bg-emerald-400 hover:bg-black active:bg-emerald-500 duration-200 group border-2 border-transparent hover:border-emerald-400">
               Submit Your Key
             </a>
           </div>
-          <p class="text-xs text-neutral-200 hover:cursor-pointer"
+          <p class="text-xs text-neutral-200 hover:cursor-pointer" id="gv-rm3"
             onclick="document.getElementById('hint').classList.toggle('hidden', false)">Click to get one hint
           </p>
           <p class="hidden text-sm" id="hint">Look for odd things, try clicking randomly on elements, some are
@@ -125,7 +125,7 @@
       <section class="grid grid-cols-1 md:grid-cols-2">
         <div class="bg-transparent md:border border-emerald-400 md:border-b-0 p-5 space-y-4">
           <div class="flex items-center gap-2">
-            <h2 class="text-base font-semibold text-emerald-500 font-semibold">Cool info</h2>
+            <h2 class="text-base text-emerald-500 font-semibold">Cool info</h2>
             <img src="https://e.alimad.co/:hehheh" class="w-6 h-6 object-contain" alt=":hehheh:">
           </div>
           <div>
@@ -134,12 +134,12 @@
               <div>
                 <p class="text-xs text-neutral-500 font-semibold">Visits</p>
                 <span id="totalPings" class="font-bold text-base text-gray-500">0</span>
-                <span id="dtotalPings" class="text-base text-xs text-green-500"></span>
+                <span id="dtotalPings" class="text-base text-green-500"></span>
               </div>
               <div>
                 <p class="text-xs text-neutral-500 font-semibold">Visitors</p>
                 <span id="uniqueIds" class="font-bold text-base text-gray-500">0</span>
-                <span id="duniqueIds" class="text-base text-xs text-green-500"></span>
+                <span id="duniqueIds" class="text-base text-green-500"></span>
               </div>
               <div>
                 <p class="text-xs text-neutral-500 font-semibold">Online</p>
@@ -148,7 +148,7 @@
             </div>
           </div>
           <div class="space-y-2">
-            <p class="text-sm font-medium text-emerald-400/80 font-semibold">Most used languages:</p>
+            <p class="text-sm font-medium text-emerald-400/80">Most used languages:</p>
             <div
               class="text-sm text-neutral-300 bg-black p-3 border border-emerald-400 grid grid-cols-[max-content_1fr] gap-x-3 gap-y-2 items-center"
               id="langs">
@@ -167,7 +167,7 @@
           class="bg-transparent border-t md:border border-emerald-400 md:border-l-0 md:border-b-0 p-5 flex flex-col justify-between space-y-4">
           <div>
             <div class="pb-1 mb-3">
-              <p class="text-sm font-medium text-emerald-400/80 font-semibold">Github stats:</p>
+              <p class="text-sm font-medium text-emerald-400/80">Github stats:</p>
             </div>
             <div class="grid grid-cols-2 gap-3 text-sm">
               <div class="bg-black p-2.5 border border-emerald-400">
@@ -200,14 +200,14 @@
         </div>
       </section>
       <section class="bg-transparent border-t md:border border-emerald-400 md:border-b-0 p-5 space-y-3">
-        <p class="text-sm font-medium text-emerald-400/80 font-semibold">
+        <p class="text-sm font-medium text-emerald-400/80">
           Recent Github activity:</p>
         <div id="gh_activity" class="text-neutral-400 divide-y divide-neutral-800/60 max-h-64 overflow-y-auto pr-1">
           <p class="text-sm py-2">Loading...</p>
         </div>
       </section>
       <section class="bg-transparent border-t md:border border-emerald-400 border-b-0 p-5 space-y-3">
-        <p class="text-sm font-medium text-emerald-400/80 font-semibold">
+        <p class="text-sm font-medium text-emerald-400/80">
           Hackatime activity:</p>
         <a href="https://hackatime.hackclub.com/@alimad" title="Click to view all of wakatime data!"
           class="block w-full bg-black md:p-3 md:border border-emerald-400 overflow-hidden">
@@ -221,7 +221,7 @@
         </a>
       </section>
       <section class="bg-transparent border-t md:border md:border-t-0 border-emerald-400 p-5 space-y-4">
-        <h2 class="text-lg font-semibold text-emerald-500 font-semibold">
+        <h2 class="text-lg font-semibold text-emerald-500">
           Comments!
         </h2>
         <div id="comments"
@@ -238,7 +238,7 @@
         </div>
       </section>
       <section class="bg-transparent border-t md:border border-emerald-400 md:border-t-0 p-5 space-y-4">
-        <h2 class="text-lg font-semibold text-emerald-500 font-semibold">
+        <h2 class="text-lg font-semibold text-emerald-500">
           Alimad Newsletter!
         </h2>
         <p id="subb" class="text-justify text-sm">Enter your email below to subscribe to the newsletter and recieve

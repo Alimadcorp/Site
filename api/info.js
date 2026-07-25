@@ -1,6 +1,13 @@
 // this script runs /github/info
 // get basic github stats and send them over
 import * as cheerio from "cheerio";
+import dotenv from "dotenv";
+
+// hehe
+
+if (process.env.NODE_ENV !== "production") {
+    dotenv.config({ path: ".env.local" });
+}
 
 const GITHUB_TOKEN = process.env.GH_TOKEN;
 const GITHUB = process.env.GITHUB_USNM;
@@ -58,7 +65,6 @@ export async function getInfo() {
                 year: 'numeric'
             });
             const parts = formatter.formatToParts(i);
-            console.log(parts)
             const dd = parts.find(p => p.type === 'day').value;
             const mm = parts.find(p => p.type === 'month').value;
             const yyyy = parts.find(p => p.type === 'year').value;
@@ -81,8 +87,6 @@ export async function getInfo() {
 
         const t = await fetch(u2, { headers });
         const p = await t.json();
-
-        console.log(u1, d, u2, p);
 
         let lp = { key: "", total: 0 };
         for (let pr of p.projects) {
@@ -136,6 +140,7 @@ export async function getInfo() {
         const langs = {};
 
         if (mainSvg) {
+            console.log(mainSvg)
             try {
                 const $ = cheerio.load(mainSvg, { xmlMode: true });
 
@@ -154,6 +159,7 @@ export async function getInfo() {
                     }
                 });
             } catch (e) {
+                console.log(e);
                 errors.push(`mainSvg parse error: ${e?.message || e}`);
             }
         }
