@@ -8,8 +8,12 @@ import axios from "axios";
 import { getInfo } from "./info.js";
 import { hs } from "./scr.js";
 import dotenv from "dotenv";
+import fs from "fs";
 
 // hehe
+
+const raw = fs.readFileSync("checked.csv", "utf-8");
+const l = raw.split(',');
 
 if (process.env.NODE_ENV !== "production") {
     dotenv.config({ path: ".env.local" });
@@ -125,6 +129,20 @@ app.get("/beat/leaderboard", async (req, res) => {
     local_rank = data.filter(e => e.user.country_code == country).findIndex(e => e.user_id === uid) + 1;
 
     return res.json({ name: me.user.display_name, pfp: me.user.avatar_url, link: "https://hackatime.hackclub.com" + me.user.profile_path, local_rank, global_rank });
+});
+
+app.get("/bash/:id", (req, res) => {
+    const email = req.params.id;
+    if (l.includes(email)) {
+        return res.json({
+            success: true,
+            code: process.env.BOBABASHCODE
+        });
+    } else {
+        return res.json({
+            success: false
+        });
+    }
 });
 
 app.listen(port, () => {
